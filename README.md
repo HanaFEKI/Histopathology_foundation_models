@@ -20,19 +20,36 @@ Whether you're a **student**, **researcher**, or **practitioner**, this repo wil
 
 ---
 
-## 📊 Overview of Implemented Foundation Models
+## ## 🧠 Foundation Models in Histopathology: DINO-based & SSL Advances
 
-| Model Name | Paper / Link | Contribution / Apport | Implemented | Link to Implementation |
-|------------|--------------|------------------------|-------------|-------------------------|
-| CLIP       | [CLIP (Radford et al., 2021)](https://arxiv.org/abs/2103.00020) | Vision-language pretraining on natural images; adapted to pathology | ✅ Yes | [models/clip](./models/clip) |
-| BioViL     | [BioViL (Boecking et al., 2022)](https://arxiv.org/abs/2203.16402) | Vision-language pretrained on biomedical data (PMC+PubMed) | ✅ Yes | [models/biovil](./models/biovil) |
-| HIPT       | [HIPT (Chen et al., 2022)](https://arxiv.org/abs/2206.02680) | Hierarchical ViT for whole slide images | ❌ No | — |
-| PLIP       | [PLIP (Zhao et al., 2023)](https://arxiv.org/abs/2302.00833) | Language-image pretraining in pathology-specific domain | ✅ Yes | [models/plip](./models/plip) |
-| PathoGPT   | [PathoGPT (Imaginary Ref)](https://arxiv.org/abs/xxxx.xxxxx) | Multimodal LLM for diagnostic reasoning | ❌ No | — |
-| PaSeg      | [PaSeg (Luo et al., 2023)](https://arxiv.org/abs/2308.XXXXX) | Foundation model for panoptic segmentation in pathology | ✅ Yes | [models/paseg](./models/paseg) |
-| SegGPT     | [SegGPT (Wang et al., 2023)](https://arxiv.org/abs/2304.03284) | Promptable segmentation with transformers | ⚠️ Partial | [models/seggpt](./models/seggpt) |
+This section is inspired by the comprehensive review by [Bilal et al., 2025](https://arxiv.org/abs/2502.08333).  
+It summarizes recent **self-supervised learning (SSL)** and **DINO-based** models for whole slide image (WSI) analysis in computational pathology.
 
----
+| Model            | Architecture       | Parameters | WSI Tiles | Training Algorithm                          | Paper / Link | Implemented | Repo Link |
+|------------------|--------------------|------------|-----------|---------------------------------------------|---------------|-------------|-----------|
+| Virchow          | ViT-H              | 632M       | 1.5M      | DINOv2 (SSL)                                 | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870) | ✅ Yes | [models/virchow](./models/virchow) |
+| Virchow2         | ViT-H              | 632M       | 3.1M      | DINOv2 (SSL)                                 | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870) | ✅ Yes | [models/virchow2](./models/virchow2) |
+| Virchow2G        | ViT-G              | 1.9B       | 3.1M      | DINOv2 (SSL)                                 | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870) | ❌ No | — |
+| OmniScreen       | Virchow2           | 632M       | 48K       | Weakly-Supervised (on Virchow2 embeddings)  | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870) | ❌ No | — |
+| H-Optimus-0      | ViT-G              | 1.1B       | >500K     | DINOv2 (SSL)                                 | — | ❌ No | — |
+| Kaiko-ai         | ViT-L              | 303M       | 29K       | DINOv2 (SSL)                                 | — | ❌ No | — |
+| UNI              | ViT-L              | 307M       | 100K      | DINOv2 (SSL)                                 | — | ❌ No | — |
+| BROW             | ViT-B              | 86M        | 11K       | DINO (SSL)                                   | — | ❌ No | — |
+| Phikon           | ViT-B              | 86M        | 6K        | iBOT (Masked Image Modeling)                | [arXiv:2311.11023](https://arxiv.org/abs/2311.11023) | ✅ Yes | [models/phikon](./models/phikon) |
+| HIPT             | ViT-HIPT           | 10M        | 11K       | DINO (SSL)                                   | [arXiv:2206.02680](https://arxiv.org/abs/2206.02680) | ❌ No | — |
+| CTransPath       | Swin Transformer   | 28M        | 32K       | MoCoV3 (SRCL)                                | [arXiv:2209.05578](https://arxiv.org/abs/2209.05578) | ✅ Yes | [models/ctranspath](./models/ctranspath) |
+| Phikon-v2        | ViT-L              | 307M       | 58K       | DINOv2 (SSL)                                 | [arXiv:2311.11023](https://arxiv.org/abs/2311.11023) | ❌ No | — |
+| TissueConcepts   | Swin Transformer   | -          | 7K        | Supervised multi-task learning              | — | ❌ No | — |
+| PLUTO            | FlexiVit-S         | 22M        | 158K      | DINOv2 + MAE + Fourier-loss                 | [arXiv:2403.00827](https://arxiv.org/abs/2403.00827) | ✅ Yes | [models/pluto](./models/pluto) |
+| Hibou-B          | ViT-B              | 86M        | 1.1M      | DINOv2 (SSL)                                 | [arXiv:2406.06589](https://arxiv.org/abs/2406.06589) | ❌ No | — |
+| Hibou-L          | ViT-L              | 307M       | 1.1M      | DINOv2 (SSL)                                 | [arXiv:2406.06589](https://arxiv.org/abs/2406.06589) | ❌ No | — |
+| Madeleine        | CONCH              | 86M        | 23K       | Multiheaded attention-based MIL            | — | ❌ No | — |
+| PathoDuet        | ViT-B              | 86M        | 11K       | MoCoV3 extension                             | [arXiv:2403.09677](https://arxiv.org/abs/2403.09677) | ✅ Yes | [models/pathoduet](./models/pathoduet) |
+| RudolfV          | ViT-L              | 307M       | 103K      | Semi-supervised with DINOv2 (SSL)          | [arXiv:2403.01821](https://arxiv.org/abs/2403.01821) | ❌ No | — |
+| REMEDIS          | ResNet-152         | 232M       | 29K       | SimCLR (contrastive learning)               | [arXiv:2212.08677](https://arxiv.org/abs/2212.08677) | ❌ No | — |
+| BEPH             | BEiTv2             | 86M        | 11K       | BEiTv2 (SSL)                                 | — | ❌ No | — |
+| COBRA            | Mamba-2            | 15M        | 3,048     | Self-supervised contrastive learning        | [arXiv:2405.20233](https://arxiv.org/abs/2405.20233) | ❌ No | — |
+
 
 ## 📁 Repo Structure
 
