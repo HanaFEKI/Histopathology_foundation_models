@@ -10,8 +10,11 @@ Whether you're a **student**, **researcher**, or **practitioner**, this repo wil
 - 🌍 Discover **beyond-histopathology applications** in broader medical vision tasks.
 
 > 🔖 *"I wish I had this repo when I started my internship. It would’ve saved me hours of searching, testing, and debugging. So I created what I wish I had."* — **Hana FEKI**
-
 ---
+## Definition of a Foundation Model
+
+A foundation model is a model that is trained on large amount of data (Most of the time multi-model), and then with the high-dimensional (e.g 2048 for ResNET50 encoder) features extracted, we add MLP on it to perform downstream tasks.
+
 ## Required Knowledge
 
 In this table, techniques are grouped by research category and ordered by their importance in recent research.
