@@ -21,25 +21,32 @@ Whether you're a **student**, **researcher**, or **practitioner**, this repo wil
 ---
 ## Required Knowledge
 
-In this table you can find all the concepts that you need to understand before exploring the foundation models.
+## Required Knowledge
 
-| Technique / Framework           | Paper / Link                                                                                 | Description                                                                                           | My Explanation & Implementation                             |
-|--------------------------------|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| Self-Supervised Learning       | [Survey on SSL](https://arxiv.org/abs/2102.12592)                                          | Learning useful representations from unlabeled data without manual annotations                     | [ssl](./explanations/ssl)                                   |
-| Contrastive Learning           | [SimCLR paper](https://arxiv.org/abs/2002.05709)                                           | A SSL technique that pulls together augmented views of the same sample and pushes apart others    | [simclr](./explanations/simclr)                             |
-| Semi-Supervised Learning       | [Semi-SL paper](https://arxiv.org/abs/1908.02983)                                          | Learning from a small amount of labeled data and a large amount of unlabeled data                  | [semisupervised](./explanations/semisupervised)            |
-| Weakly Supervised Learning     | [Weakly Supervised](https://arxiv.org/abs/1805.07892)                                      | Learning from weak or noisy labels instead of fully annotated data                                 | [weakly_supervised](./explanations/weakly_supervised)       |
-| Unsupervised Learning          | [Unsupervised Learning](https://www.cs.cmu.edu/~epxing/Class/10708-16/notes/unsupervised.pdf) | Learning patterns from unlabeled data                                                             | [unsupervised](./explanations/unsupervised)                 |
-| SimCLR                         | [SimCLR](https://arxiv.org/abs/2002.05709)                                                 | Contrastive SSL framework using data augmentations and a simple architecture                       | [simclr](./implementations/simclr)                          |
-| DINO                           | [DINO](https://arxiv.org/abs/2104.14294)                                                   | Self-distillation with no labels; trains a student network to match a teacher                     | [dino](./implementations/dino)                              |
-| DinoV2                         | [DinoV2](https://arxiv.org/abs/2304.07193)                                                 | Improved version of DINO with stronger training recipes                                           | [dinov2](./implementations/dinov2)                          |
-| MoCo                           | [MoCo](https://arxiv.org/abs/1911.05722)                                                   | Momentum contrast method for building dynamic dictionaries                                        | [moco](./implementations/moco)                              |
-| CLIP                           | [CLIP](https://arxiv.org/abs/2103.00020)                                                   | Contrastive learning with image-text pairs for multi-modal learning                               | [clip](./implementations/clip)                              |
-| MAE                            | [MAE](https://arxiv.org/abs/2111.06377)                                                    | Masked Autoencoder for self-supervised learning by reconstructing masked image patches            | [mae](./implementations/mae)                                |
-| VAE                            | [VAE](https://arxiv.org/abs/1312.6114)                                                     | Variational Autoencoder for learning latent representations of data                               | [vae](./implementations/vae)                                |
-| MIM                            | [Masked Image Modeling (MIM)](https://arxiv.org/abs/2302.09841)                            | Framework that predicts masked parts of the image during training                                 | [mim](./implementations/mim)                                |
-| Aggregation                    | —                                                                                           | Techniques to aggregate patch or token embeddings to form a global representation                | [aggregation](./explanations/aggregation)                   |
-| ViT                            | [ViT](https://arxiv.org/abs/2010.11929)                                                    | Vision Transformer architecture for image classification                                          | [vit](./implementations/vit)                                |
+In this table, techniques are grouped by research category and ordered by their importance in recent research.
+
+| Category                | Technique / Framework      | Paper / Link                                                        | Description                                                                                           | My Explanation & Implementation                   |
+|-------------------------|---------------------------|--------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------|
+| **Self-Supervised Learning (SSL)** | Self-Supervised Learning       | [Survey on SSL](https://arxiv.org/abs/2102.12592)                 | Learning useful representations from unlabeled data without manual annotations                     | [ssl](./explanations/ssl)                         |
+|                         | Semi-Supervised Learning   | [Semi-SL paper](https://arxiv.org/abs/1908.02983)                  | Learning from small labeled and large unlabeled datasets                                           | [semisupervised](./explanations/semisupervised)  |
+|                         | Weakly Supervised Learning | [Weakly Supervised](https://arxiv.org/abs/1805.07892)              | Learning from weak/noisy labels instead of fully annotated data                                   | [weakly_supervised](./explanations/weakly_supervised) |
+|                         | Unsupervised Learning      | [Unsupervised Learning](https://www.cs.cmu.edu/~epxing/Class/10708-16/notes/unsupervised.pdf) | Learning patterns from unlabeled data                                                             | [unsupervised](./explanations/unsupervised)       |
+
+| **Contrastive Learning** | SimCLR                    | [SimCLR](https://arxiv.org/abs/2002.05709)                         | Contrastive SSL framework using augmented views and a simple architecture                         | [simclr](./implementations/simclr)                |
+|                         | MoCo                      | [MoCo](https://arxiv.org/abs/1911.05722)                           | Momentum contrast for building dynamic dictionaries                                              | [moco](./implementations/moco)                     |
+|                         | CLIP                      | [CLIP](https://arxiv.org/abs/2103.00020)                           | Contrastive learning with image-text pairs for multi-modal learning                              | [clip](./implementations/clip)                     |
+
+| **Masked Modeling**     | MAE                       | [MAE](https://arxiv.org/abs/2111.06377)                            | Masked Autoencoder predicting masked image patches                                               | [mae](./implementations/mae)                       |
+|                         | MIM                       | [Masked Image Modeling (MIM)](https://arxiv.org/abs/2302.09841)   | Predict masked parts of images during training                                                   | [mim](./implementations/mim)                       |
+
+| **Self-Distillation**   | DINO                      | [DINO](https://arxiv.org/abs/2104.14294)                          | Self-distillation without labels, training student to match teacher                              | [dino](./implementations/dino)                     |
+|                         | DinoV2                    | [DinoV2](https://arxiv.org/abs/2304.07193)                        | Improved DINO with stronger recipes                                                              | [dinov2](./implementations/dinov2)                 |
+
+| **Generative Models**   | VAE                       | [VAE](https://arxiv.org/abs/1312.6114)                            | Variational Autoencoder for latent variable modeling                                             | [vae](./implementations/vae)                       |
+
+| **Architectures**       | ViT                       | [ViT](https://arxiv.org/abs/2010.11929)                           | Vision Transformer architecture for image classification                                        | [vit](./implementations/vit)                       |
+
+| **Aggregation Methods** | Aggregation               | —                                                                  | Techniques to aggregate patch or token embeddings to form global representations                | [aggregation](./explanations/aggregation)          |
 
 
   
