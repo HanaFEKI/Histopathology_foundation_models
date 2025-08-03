@@ -5,7 +5,6 @@
 
 **SimCLR** is a self-supervised learning framework designed to learn meaningful **visual representations** from unlabeled data. It does this by **maximizing agreement between different augmented views of the same image**, using a contrastive loss applied in a learned latent space.
 
----
 
 ## 🚀 Core Components of SimCLR
 
@@ -44,7 +43,6 @@ Controls the distribution’s smoothness. Lower τ sharpens the contrastive obje
 
 ![SimCLR Process](SimCLR_process.png)
 
----
 
 ## 🧪 The Role of Data Augmentation
 
@@ -56,8 +54,6 @@ Augmentations are essential for representation learning in SimCLR. The best perf
 
 > 🧠 **Tip**: Augmentations must preserve **semantic meaning** while introducing **appearance variation**.
 
----
-
 ## 🔄 The Importance of the Projection Head
 
 Although the encoder output is high-dimensional (e.g., 2048 from ResNet-50), computing contrastive loss on such high-dim vectors is suboptimal.
@@ -65,8 +61,6 @@ Although the encoder output is high-dimensional (e.g., 2048 from ResNet-50), com
 - An MLP projection head reduces dimensions (e.g., to 128 or 256)
 - Boosts both **computational efficiency** and **contrastive performance**
 - The encoder output (before the projection head) is used for downstream tasks
-
----
 
 ## 🎯 When and Why to Use SimCLR
 
@@ -79,7 +73,6 @@ Although the encoder output is high-dimensional (e.g., 2048 from ResNet-50), com
 - You lack **computational resources** (large batch sizes are necessary)
 - You're working in **low-resource** environments (consider MoCo)
 
----
 
 ## 🔄 SimCLR vs MoCo
 
@@ -92,7 +85,6 @@ Although the encoder output is high-dimensional (e.g., 2048 from ResNet-50), com
 | Compute Requirements        | High                            | Moderate                          |
 | Representation Quality      | Very high (with compute)        | Comparable on many tasks          |
 
----
 
 ## 🔁 SimCLRv2: Semi-Supervised Extension
 
@@ -121,7 +113,6 @@ SimCLRv2 improves upon SimCLR by introducing a three-stage training pipeline:
 - Match student output to teacher predictions using **distillation loss**
 - Teacher is frozen; only student is trained
 
----
 
 ## ❓ Fine-Tuning vs Distillation
 
@@ -132,8 +123,6 @@ SimCLRv2 improves upon SimCLR by introducing a three-stage training pipeline:
 | Teacher Model      | Not required                           | Required                                       |
 | Efficiency         | Simple and fast                        | More sample-efficient for large unlabeled sets |
 | Architecture Flexibility | Uses same model                   | Can use different models (but same works well) |
-
----
 
 ## 📐 Architecture Summary
 
