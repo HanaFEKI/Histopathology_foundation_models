@@ -34,24 +34,54 @@ In this table, techniques are grouped by research category and ordered by their 
 | **Aggregation Methods** | Aggregation               | [An Aggregation of Aggregation Methods in Computational Pathology](https://arxiv.org/abs/2211.01256)                                                                  | Techniques to aggregate patch or token embeddings to form global representations                | [aggregation](./explanations/aggregation)          |
 | **MOE** | Mixture of Experts               | [MoE]()                                                                  | Techniques to aggregate patch or token embeddings to form global representations                | [aggregation](./explanations/moe)          |
   
+---
+## 🧠 Foundation Models in Computational Pathology
 
+A curated list of foundational and large-scale models for computational pathology. This table categorizes each model by its learning paradigm and highlights core innovations and downstream capabilities.
 
 ---
-## DINO-based & SSL Advances
 
-This section is inspired by the comprehensive review by [Bilal et al., 2025](https://arxiv.org/abs/2502.08333).  
-It summarizes recent **self-supervised learning (SSL)** and **DINO-based** models for whole slide image (WSI) analysis in computational pathology.
+### Self-Supervised Learning (SSL)
 
-| Model          | Paper / Link                                                                 | Official Link                                  | My Implementation & Explanation           | Key Innovation / Feature                                                                                  | Slides   | WSI  | Cell | Gen. | VQA | RptGen | WSI-Lang | Multi-Organ Rpt | MultiModal Rpt | AI Asst | Captioning | Generative |
-|----------------|------------------------------------------------------------------------------|-----------------------------------------------|--------------------------------------------|-----------------------------------------------------------------------------------------------------------|----------|------|------|------|-----|--------|----------|-----------------|----------------|---------|------------|------------|
-| Virchow       | [arXiv:2309.07778](https://arxiv.org/pdf/2309.07778)                        | 🤗 [paige-ai/Virchow](https://huggingface.co/paige-ai/Virchow) | [models/virchow](./models/virchow)        | Learns using global and local crops with morph-preserving data augmentation                                | 1,488,550 | ❌   | ❌   | 17   | ✅  | ❌     | ✅       | ✅              | ❌             | ✅      | ✅         | ❌         |
-| Virchow2      | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870)                        | 🐙 [BatsResearch/Virchow](https://github.com/BatsResearch/Virchow) | [models/virchow2](./models/virchow2)      | Larger dataset with pathology-inspired augmentations to boost training diversity                         | 3,134,922 | ❌   | ❌   | 25   | ✅  | Limited | ✅       | 37              | ✅             | ✅      | ✅         | ❌         |
-| H-Optimus-0  | —                                                                            | —                                             | —                                          | Powerful ViT-G with 40 transformer blocks for efficient high-dimensional feature handling                | 500,000   | ❌   | ❌   | 32   | ✅  | ❌     | ✅       | 11              | ✅             | ✅      | ❌         | ❌         |
-| UNI          | —                                                                            | —                                             | —                                          | Combines masked image modeling and self-distillation with robust regularization                           | 100,000   | ❌   | ❌   | 20   | ✅  | ❌     | ✅       | 34              | ✅             | ✅      | ✅         | ❌         |
-| Phikon       | [arXiv:2311.11023](https://arxiv.org/abs/2311.11023)                        | —                                             | [models/phikon](./models/phikon)           | Uses iBOT self-distillation with masking; robust to image changes                                       | 6,093     | ❌   | ❌   | 16   | ✅  | ❌     | ✅       | 17              | ✅             | ✅      | ✅         | ❌         |
-| Phikon-v2    | [arXiv:2311.11023](https://arxiv.org/abs/2311.11023)                        | —                                             | —                                          | Scaled ViT-L model trained on 460M tiles; strong ensemble for biomarker prediction                       | 58,359    | ❌   | ❌   | 30   | ✅  | Limited | ✅       | 8               | ✅             | ✅      | ❌         | ❌         |
-| PLUTO        | [arXiv:2403.00827](https://arxiv.org/abs/2403.00827)                        | —                                             | [models/pluto](./models/pluto)             | Multi-scale patching with masked autoencoding and Fourier loss improves out-of-distribution robustness  | 158,852   | ❌   | ❌   | 28   | ✅  | ✅     | ✅       | 13              | ✅             | ✅      | ✅         | ❌         |
-| RudolfV      | [arXiv:2403.01821](https://arxiv.org/abs/2403.01821)                        | —                                             | —                                          | Large-scale training with stain-specific augmentations and pathologist insights                         | 133,998   | ❌   | ❌   | 58   | ✅  | ✅     | ✅       | 50              | ✅             | ✅      | ✅         | ❌         |
+| Model   | Paper / Link                                         | Key Innovation                                                      | Slides    | Report Gen. | Vision+Lang | Captioning |
+| ------- | ---------------------------------------------------- | ------------------------------------------------------------------- | --------- | ----------- | ----------- | ---------- |
+| Virchow | [arXiv:2309.07778](https://arxiv.org/pdf/2309.07778) | Global & local crops + morphology-preserving ECT augmentations      | 1,488,550 | ✅           | ✅           | ❌          |
+| UNI     | —                                                    | MIM + self-distillation with Sinkhorn & KoLeo regularization        | 100,000   | ✅           | ✅           | ✅          |
+| Phikon  | [arXiv:2311.11023](https://arxiv.org/abs/2311.11023) | iBOT-based masked self-distillation; robust to visual perturbations | 6,093     | ✅           | ✅           | ✅          |
 
-## 📁 Repo Structure
+---
 
+### Masked Image Modeling (MIM)
+
+| Model     | Paper / Link                                         | Key Innovation                                                                | Slides  | Report Gen. | Vision+Lang | Captioning |
+| --------- | ---------------------------------------------------- | ----------------------------------------------------------------------------- | ------- | ----------- | ----------- | ---------- |
+| Phikon-v2 | [arXiv:2311.11023](https://arxiv.org/abs/2311.11023) | ViT-L scaled; trained on 460M tiles; robust ensemble for biomarker prediction | 58,359  | ✅           | ✅           | ❌          |
+| PLUTO     | [arXiv:2403.00827](https://arxiv.org/abs/2403.00827) | Multi-scale MIM with Fourier loss for out-of-distribution robustness          | 158,852 | ✅           | ✅           | ✅          |
+
+---
+
+### Hybrid / Expert-Inspired Learning
+
+| Model       | Paper / Link                                         | Key Innovation                                                                | Slides  | Report Gen. | Vision+Lang | Captioning |
+| ----------- | ---------------------------------------------------- | ----------------------------------------------------------------------------- | ------- | ----------- | ----------- | ---------- |
+| RudolfV     | [arXiv:2403.01821](https://arxiv.org/abs/2403.01821) | Trained with stain-specific augmentations and pathologist guidance            | 133,998 | ✅           | ✅           | ✅          |
+| H-Optimus-0 | —                                                    | ViT-G/14 with 40 transformer blocks for efficient high-dimensional processing | 500,000 | ✅           | ✅           | ❌          |
+| H-Optimus-1 | —                                                    | Variant of H-Optimus-0                                                        | 500,000 | ✅           | ✅           | ❌          |
+
+---
+
+### Multimodal / Multitask Architectures (Hybrid)
+
+| Model    | Paper / Link                                         | Key Innovation                                                          | Slides    | Report Gen. | Vision+Lang | Captioning |
+| -------- | ---------------------------------------------------- | ----------------------------------------------------------------------- | --------- | ----------- | ----------- | ---------- |
+| Virchow2 | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870) | Trained on 3.1M WSIs; diverse data and pathology-inspired augmentations | 3,134,922 | ✅           | ✅           | ❌          |
+
+---
+
+More categories and models will be added progressively as we parse the landscape of generative pathology models and language-vision integrations.
+
+For folder reference: [Learning Techniques](Learning%20Techniques/)
+
+---
+
+If you use or extend this repo, please cite the source papers and link back to this project. 🙏
