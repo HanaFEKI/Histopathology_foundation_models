@@ -20,7 +20,7 @@ Whether you're a **student**, **researcher**, or **practitioner**, this repo wil
 
 ---
 
-## 🧠 Foundation Models in Histopathology: DINO-based & SSL Advances
+## DINO-based & SSL Advances
 
 This section is inspired by the comprehensive review by [Bilal et al., 2025](https://arxiv.org/abs/2502.08333).  
 It summarizes recent **self-supervised learning (SSL)** and **DINO-based** models for whole slide image (WSI) analysis in computational pathology.
