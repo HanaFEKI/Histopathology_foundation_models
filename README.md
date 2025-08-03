@@ -29,21 +29,15 @@ In this table, techniques are grouped by research category and ordered by their 
 |                         | Semi-Supervised Learning   | [Semi-SL paper](https://arxiv.org/abs/1908.02983)                  | Learning from small labeled and large unlabeled datasets                                           | [semisupervised](./explanations/semisupervised)  |
 |                         | Weakly Supervised Learning | [Weakly Supervised](https://arxiv.org/abs/1805.07892)              | Learning from weak/noisy labels instead of fully annotated data                                   | [weakly_supervised](./explanations/weakly_supervised) |
 |                         | Unsupervised Learning      | [Unsupervised Learning](https://www.cs.cmu.edu/~epxing/Class/10708-16/notes/unsupervised.pdf) | Learning patterns from unlabeled data                                                             | [unsupervised](./explanations/unsupervised)       |
-
 | **Contrastive Learning** | SimCLR                    | [SimCLR](https://arxiv.org/abs/2002.05709)                         | Contrastive SSL framework using augmented views and a simple architecture                         | [simclr](./implementations/simclr)                |
 |                         | MoCo                      | [MoCo](https://arxiv.org/abs/1911.05722)                           | Momentum contrast for building dynamic dictionaries                                              | [moco](./implementations/moco)                     |
 |                         | CLIP                      | [CLIP](https://arxiv.org/abs/2103.00020)                           | Contrastive learning with image-text pairs for multi-modal learning                              | [clip](./implementations/clip)                     |
-
 | **Masked Modeling**     | MAE                       | [MAE](https://arxiv.org/abs/2111.06377)                            | Masked Autoencoder predicting masked image patches                                               | [mae](./implementations/mae)                       |
 |                         | MIM                       | [Masked Image Modeling (MIM)](https://arxiv.org/abs/2302.09841)   | Predict masked parts of images during training                                                   | [mim](./implementations/mim)                       |
-
 | **Self-Distillation**   | DINO                      | [DINO](https://arxiv.org/abs/2104.14294)                          | Self-distillation without labels, training student to match teacher                              | [dino](./implementations/dino)                     |
 |                         | DinoV2                    | [DinoV2](https://arxiv.org/abs/2304.07193)                        | Improved DINO with stronger recipes                                                              | [dinov2](./implementations/dinov2)                 |
-
 | **Generative Models**   | VAE                       | [VAE](https://arxiv.org/abs/1312.6114)                            | Variational Autoencoder for latent variable modeling                                             | [vae](./implementations/vae)                       |
-
 | **Architectures**       | ViT                       | [ViT](https://arxiv.org/abs/2010.11929)                           | Vision Transformer architecture for image classification                                        | [vit](./implementations/vit)                       |
-
 | **Aggregation Methods** | Aggregation               | —                                                                  | Techniques to aggregate patch or token embeddings to form global representations                | [aggregation](./explanations/aggregation)          |
 
 
