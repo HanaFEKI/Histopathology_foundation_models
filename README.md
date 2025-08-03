@@ -16,7 +16,7 @@ Whether you're a **student**, **researcher**, or **practitioner**, this repo wil
 
 In this table, techniques are grouped by research category and ordered by their importance in recent research.
 
-| Category                | Technique / Framework      | Paper / Link                                                        | Description                                                                                           | My Explanation / Implementation                   |
+| Category                | Technique     | Paper / Link                                                        | Description                                                                                           | My Explanation / Implementation                   |
 |-------------------------|---------------------------|--------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | **Architectures**       | ViT                       | [ViT](https://arxiv.org/abs/2010.11929)                           | Vision Transformer architecture for image classification                                        | [vit](./implementations/vit)                       |
 | **[Learning Techniques](Learning%20Techniques/)** | Self-Supervised Learning       | [A Survey on Self-supervised Learning: Algorithms, Applications, and Future Trends](https://arxiv.org/abs/2301.05712)                 | Learning useful representations from unlabeled data without manual annotations                     | [ssl](./explanations/ssl)                         |
