@@ -39,7 +39,6 @@ In this table, techniques are grouped by research category and ordered by their 
 
 A curated list of foundational and large-scale models for computational pathology. This table categorizes each model by its learning paradigm and highlights core innovations and downstream capabilities.
 
----
 
 ### Self-Supervised Learning (SSL)
 
@@ -49,7 +48,6 @@ A curated list of foundational and large-scale models for computational patholog
 | UNI     | —                                                    | MIM + self-distillation with Sinkhorn & KoLeo regularization        | 100,000   | ✅           | ✅           | ✅          |
 | Phikon  | [arXiv:2311.11023](https://arxiv.org/abs/2311.11023) | iBOT-based masked self-distillation; robust to visual perturbations | 6,093     | ✅           | ✅           | ✅          |
 
----
 
 ### Masked Image Modeling (MIM)
 
@@ -58,7 +56,6 @@ A curated list of foundational and large-scale models for computational patholog
 | Phikon-v2 | [arXiv:2311.11023](https://arxiv.org/abs/2311.11023) | ViT-L scaled; trained on 460M tiles; robust ensemble for biomarker prediction | 58,359  | ✅           | ✅           | ❌          |
 | PLUTO     | [arXiv:2403.00827](https://arxiv.org/abs/2403.00827) | Multi-scale MIM with Fourier loss for out-of-distribution robustness          | 158,852 | ✅           | ✅           | ✅          |
 
----
 
 ### Hybrid / Expert-Inspired Learning
 
@@ -68,7 +65,6 @@ A curated list of foundational and large-scale models for computational patholog
 | H-Optimus-0 | —                                                    | ViT-G/14 with 40 transformer blocks for efficient high-dimensional processing | 500,000 | ✅           | ✅           | ❌          |
 | H-Optimus-1 | —                                                    | Variant of H-Optimus-0                                                        | 500,000 | ✅           | ✅           | ❌          |
 
----
 
 ### Multimodal / Multitask Architectures (Hybrid)
 
