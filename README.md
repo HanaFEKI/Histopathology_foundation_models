@@ -30,9 +30,8 @@ In this table, techniques are grouped by research category and ordered by their 
 |                         | MIM                       | [Masked Image Modeling (MIM)](https://arxiv.org/abs/2302.09841)   | Predict masked parts of images during training                                                   | [mim](./implementations/mim)                       |
 | **Self-Distillation**   | DINO                      | [Emerging Properties in Self-Supervised Vision Transformers](https://arxiv.org/abs/2104.14294)                          | Self-distillation without labels, training student to match teacher                              | [dino](./implementations/dino)                     |
 |                         | DinoV2                    | [DINOv2: Learning Robust Visual Features without Supervision](https://arxiv.org/abs/2304.07193)                        | Improved DINO with stronger recipes                                                              | [dinov2](./implementations/dinov2)                 |
-| **Aggregation Methods** | Aggregation               | —                                                                  | Techniques to aggregate patch or token embeddings to form global representations                | [aggregation](./explanations/aggregation)          |
-
-
+| **Aggregation Methods** | Aggregation               | [An Aggregation of Aggregation Methods in Computational Pathology](https://arxiv.org/abs/2211.01256)                                                                  | Techniques to aggregate patch or token embeddings to form global representations                | [aggregation](./explanations/aggregation)          |
+| **MOE** | Mixture of Experts               | [MoE]()                                                                  | Techniques to aggregate patch or token embeddings to form global representations                | [aggregation](./explanations/moe)          |
   
 
 
