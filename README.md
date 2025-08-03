@@ -25,7 +25,7 @@ Whether you're a **student**, **researcher**, or **practitioner**, this repo wil
 This section is inspired by the comprehensive review by [Bilal et al., 2025](https://arxiv.org/abs/2502.08333).  
 It summarizes recent **self-supervised learning (SSL)** and **DINO-based** models for whole slide image (WSI) analysis in computational pathology.
 
-| Model            | Paper / Link                                                                 | Official Link                                | My Implementation & Explanation            | My Contribution |
+| Model            | Paper / Link                                                                 | Official Link                                | My Implementation & Explanation            | Characteristics |
 |------------------|------------------------------------------------------------------------------|-----------------------------------------------|---------------------------------------------|------------------|
 | Virchow          | [arXiv:2309.07778](https://arxiv.org/pdf/2309.07778)                         | 🤗 [paige-ai/Virchow](https://huggingface.co/paige-ai/Virchow) | [models/virchow](./models/virchow)         | —                |
 | Virchow2         | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870)                         | 🐙 [BatsResearch/Virchow](https://github.com/BatsResearch/Virchow) | [models/virchow2](./models/virchow2)       | —                |
