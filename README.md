@@ -16,7 +16,7 @@ Whether you're a **student**, **researcher**, or **practitioner**, this repo wil
 
 In this table, techniques are grouped by research category and ordered by their importance in recent research.
 
-| Category                | Technique / Framework      | Paper / Link                                                        | Description                                                                                           | My Explanation & Implementation                   |
+| Category                | Technique / Framework      | Paper / Link                                                        | Description                                                                                           | My Explanation / Implementation                   |
 |-------------------------|---------------------------|--------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | **[Learning Techniques](Learning%20Techniques/)** | Self-Supervised Learning       | [A Survey on Self-supervised Learning: Algorithms, Applications, and Future Trends](https://arxiv.org/abs/2301.05712)                 | Learning useful representations from unlabeled data without manual annotations                     | [ssl](./explanations/ssl)                         |
 |                         | Semi-Supervised Learning   | [A Survey on Deep Semi-supervised Learning](https://arxiv.org/abs/2103.00550)                  | Learning from small labeled and large unlabeled datasets                                           | [semisupervised](./explanations/semisupervised)  |
