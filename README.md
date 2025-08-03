@@ -85,9 +85,4 @@ A curated list of foundational and large-scale models for computational patholog
 ---
 
 More categories and models will be added progressively as we parse the landscape of generative pathology models and language-vision integrations.
-
-For folder reference: [Learning Techniques](Learning%20Techniques/)
-
----
-
 If you use or extend this repo, please cite the source papers and link back to this project. 🙏
