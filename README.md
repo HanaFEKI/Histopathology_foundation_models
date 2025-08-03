@@ -25,11 +25,6 @@ Whether you're a **student**, **researcher**, or **practitioner**, this repo wil
 This section is inspired by the comprehensive review by [Bilal et al., 2025](https://arxiv.org/abs/2502.08333).  
 It summarizes recent **self-supervised learning (SSL)** and **DINO-based** models for whole slide image (WSI) analysis in computational pathology.
 
-## 🧠 Foundation Models in Histopathology: DINO-based & SSL Advances
-
-This section is inspired by the comprehensive review by [Bilal et al., 2025](https://arxiv.org/abs/2502.08333).  
-It summarizes recent **self-supervised learning (SSL)** and **DINO-based** models for whole slide image (WSI) analysis in computational pathology.
-
 | Model            | Architecture       | Parameters | WSI Tiles | Training Algorithm                          | Paper / Link | Implemented | Repo Link | Official GitHub |
 |------------------|--------------------|------------|-----------|---------------------------------------------|---------------|-------------|-----------|------------------|
 | Virchow          | ViT-H              | 632M       | 1.5M      | DINOv2 (SSL)                                 | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870) | ✅ Yes | [models/virchow](./models/virchow) | [BatsResearch/Virchow](https://github.com/BatsResearch/Virchow) |
