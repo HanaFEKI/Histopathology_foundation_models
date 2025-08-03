@@ -21,8 +21,6 @@ Whether you're a **student**, **researcher**, or **practitioner**, this repo wil
 ---
 ## Required Knowledge
 
-## Required Knowledge
-
 In this table, techniques are grouped by research category and ordered by their importance in recent research.
 
 | Category                | Technique / Framework      | Paper / Link                                                        | Description                                                                                           | My Explanation & Implementation                   |
