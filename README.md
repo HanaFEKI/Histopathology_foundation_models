@@ -25,30 +25,30 @@ Whether you're a **student**, **researcher**, or **practitioner**, this repo wil
 This section is inspired by the comprehensive review by [Bilal et al., 2025](https://arxiv.org/abs/2502.08333).  
 It summarizes recent **self-supervised learning (SSL)** and **DINO-based** models for whole slide image (WSI) analysis in computational pathology.
 
-| Model            | Architecture       | Parameters | WSI Tiles | Training Algorithm                          | Paper / Link | Implemented | Repo Link | Official GitHub |
-|------------------|--------------------|------------|-----------|---------------------------------------------|---------------|-------------|-----------|------------------|
-| Virchow          | ViT-H              | 632M       | 1.5M      | DINOv2 (SSL)                                 | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870) | ✅ Yes | [models/virchow](./models/virchow) | [BatsResearch/Virchow](https://github.com/BatsResearch/Virchow) |
-| Virchow2         | ViT-H              | 632M       | 3.1M      | DINOv2 (SSL)                                 | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870) | ✅ Yes | [models/virchow2](./models/virchow2) | [BatsResearch/Virchow](https://github.com/BatsResearch/Virchow) |
-| Virchow2G        | ViT-G              | 1.9B       | 3.1M      | DINOv2 (SSL)                                 | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870) | ❌ No | — | [BatsResearch/Virchow](https://github.com/BatsResearch/Virchow) |
-| OmniScreen       | Virchow2           | 632M       | 48K       | Weakly-Supervised (on Virchow2 embeddings)  | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870) | ❌ No | — | [BatsResearch/Virchow](https://github.com/BatsResearch/Virchow) |
-| H-Optimus-0      | ViT-G              | 1.1B       | >500K     | DINOv2 (SSL)                                 | — | ❌ No | — | — |
-| Kaiko-ai         | ViT-L              | 303M       | 29K       | DINOv2 (SSL)                                 | — | ❌ No | — | — |
-| UNI              | ViT-L              | 307M       | 100K      | DINOv2 (SSL)                                 | — | ❌ No | — | — |
-| BROW             | ViT-B              | 86M        | 11K       | DINO (SSL)                                   | — | ❌ No | — | — |
-| Phikon           | ViT-B              | 86M        | 6K        | iBOT (Masked Image Modeling)                | [arXiv:2311.11023](https://arxiv.org/abs/2311.11023) | ✅ Yes | [models/phikon](./models/phikon) | — |
-| HIPT             | ViT-HIPT           | 10M        | 11K       | DINO (SSL)                                   | [arXiv:2206.02680](https://arxiv.org/abs/2206.02680) | ❌ No | — | [mahmoodlab/HIPT](https://github.com/mahmoodlab/HIPT) |
-| CTransPath       | Swin Transformer   | 28M        | 32K       | MoCoV3 (SRCL)                                | [arXiv:2209.05578](https://arxiv.org/abs/2209.05578) | ✅ Yes | [models/ctranspath](./models/ctranspath) | [Bin-Chen-Lab/CTransPath](https://github.com/Bin-Chen-Lab/CTransPath) |
-| Phikon-v2        | ViT-L              | 307M       | 58K       | DINOv2 (SSL)                                 | [arXiv:2311.11023](https://arxiv.org/abs/2311.11023) | ❌ No | — | — |
-| TissueConcepts   | Swin Transformer   | -          | 7K        | Supervised multi-task learning              | — | ❌ No | — | — |
-| PLUTO            | FlexiVit-S         | 22M        | 158K      | DINOv2 + MAE + Fourier-loss                 | [arXiv:2403.00827](https://arxiv.org/abs/2403.00827) | ✅ Yes | [models/pluto](./models/pluto) | — |
-| Hibou-B          | ViT-B              | 86M        | 1.1M      | DINOv2 (SSL)                                 | [arXiv:2406.06589](https://arxiv.org/abs/2406.06589) | ❌ No | — | — |
-| Hibou-L          | ViT-L              | 307M       | 1.1M      | DINOv2 (SSL)                                 | [arXiv:2406.06589](https://arxiv.org/abs/2406.06589) | ❌ No | — | — |
-| Madeleine        | CONCH              | 86M        | 23K       | Multiheaded attention-based MIL             | — | ❌ No | — | — |
-| PathoDuet        | ViT-B              | 86M        | 11K       | MoCoV3 extension                             | [arXiv:2403.09677](https://arxiv.org/abs/2403.09677) | ✅ Yes | [models/pathoduet](./models/pathoduet) | — |
-| RudolfV          | ViT-L              | 307M       | 103K      | Semi-supervised with DINOv2 (SSL)           | [arXiv:2403.01821](https://arxiv.org/abs/2403.01821) | ❌ No | — | — |
-| REMEDIS          | ResNet-152         | 232M       | 29K       | SimCLR (contrastive learning)               | [arXiv:2212.08677](https://arxiv.org/abs/2212.08677) | ❌ No | — | [boschresearch/remedis](https://github.com/boschresearch/remedis) |
-| BEPH             | BEiTv2             | 86M        | 11K       | BEiTv2 (SSL)                                 | — | ❌ No | — | — |
-| COBRA            | Mamba-2            | 15M        | 3,048     | Self-supervised contrastive learning        | [arXiv:2405.20233](https://arxiv.org/abs/2405.20233) | ❌ No | — | [BatsResearch/COBRA](https://github.com/BatsResearch/COBRA) |
+| Model            | Paper / Link                                                                 | Official Link                                | My Implementation & Explanation            | My Contribution |
+|------------------|------------------------------------------------------------------------------|-----------------------------------------------|---------------------------------------------|------------------|
+| Virchow          | [arXiv:2309.07778](https://arxiv.org/pdf/2309.07778)                         | 🤗 [paige-ai/Virchow](https://huggingface.co/paige-ai/Virchow) | [models/virchow](./models/virchow)         | —                |
+| Virchow2         | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870)                         | 🐙 [BatsResearch/Virchow](https://github.com/BatsResearch/Virchow) | [models/virchow2](./models/virchow2)       | —                |
+| Virchow2G        | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870)                         | 🐙 [BatsResearch/Virchow](https://github.com/BatsResearch/Virchow) | —                                           | —                |
+| OmniScreen       | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870)                         | 🐙 [BatsResearch/Virchow](https://github.com/BatsResearch/Virchow) | —                                           | —                |
+| H-Optimus-0      | —                                                                            | —                                             | —                                           | —                |
+| Kaiko-ai         | —                                                                            | —                                             | —                                           | —                |
+| UNI              | —                                                                            | —                                             | —                                           | —                |
+| BROW             | —                                                                            | —                                             | —                                           | —                |
+| Phikon           | [arXiv:2311.11023](https://arxiv.org/abs/2311.11023)                         | —                                             | [models/phikon](./models/phikon)           | —                |
+| HIPT             | [arXiv:2206.02680](https://arxiv.org/abs/2206.02680)                         | 🐙 [mahmoodlab/HIPT](https://github.com/mahmoodlab/HIPT) | —                                           | —                |
+| CTransPath       | [arXiv:2209.05578](https://arxiv.org/abs/2209.05578)                         | 🐙 [Bin-Chen-Lab/CTransPath](https://github.com/Bin-Chen-Lab/CTransPath) | [models/ctranspath](./models/ctranspath) | —                |
+| Phikon-v2        | [arXiv:2311.11023](https://arxiv.org/abs/2311.11023)                         | —                                             | —                                           | —                |
+| TissueConcepts   | —                                                                            | —                                             | —                                           | —                |
+| PLUTO            | [arXiv:2403.00827](https://arxiv.org/abs/2403.00827)                         | —                                             | [models/pluto](./models/pluto)             | —                |
+| Hibou-B          | [arXiv:2406.06589](https://arxiv.org/abs/2406.06589)                         | —                                             | —                                           | —                |
+| Hibou-L          | [arXiv:2406.06589](https://arxiv.org/abs/2406.06589)                         | —                                             | —                                           | —                |
+| Madeleine        | —                                                                            | —                                             | —                                           | —                |
+| PathoDuet        | [arXiv:2403.09677](https://arxiv.org/abs/2403.09677)                         | —                                             | [models/pathoduet](./models/pathoduet)     | —                |
+| RudolfV          | [arXiv:2403.01821](https://arxiv.org/abs/2403.01821)                         | —                                             | —                                           | —                |
+| REMEDIS          | [arXiv:2212.08677](https://arxiv.org/abs/2212.08677)                         | 🐙 [boschresearch/remedis](https://github.com/boschresearch/remedis) | —                                     | —                |
+| BEPH             | —                                                                            | —                                             | —                                           | —                |
+| COBRA            | [arXiv:2405.20233](https://arxiv.org/abs/2405.20233)                         | 🐙 [BatsResearch/COBRA](https://github.com/BatsResearch/COBRA) | —                                       | —                |
 
 
 
