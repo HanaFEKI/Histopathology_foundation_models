@@ -16,7 +16,7 @@ Whether you're a **student**, **researcher**, or **practitioner**, this repo wil
 
 In this table, techniques are grouped by research category and ordered by their importance in recent research.
 
-| Category                  | Technique                | Paper / Link                                                        | Description                                                                                           | My Explanation / Implementation                   |
+| Category                  | Technique                | Paper / Link                                                        | Description                                                                                           | Explanation & Implementation                   |
 |---------------------------|--------------------------|---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | **[Architectures](Architectures/)**         | Transformer              | [Attention Is All You Need](https://arxiv.org/abs/1706.03762)       | Transformer architecture                                                                               | [transformer](./implementations/transformer)      |
 |                           | ViT                      | [An Image is Worth 16x16 Words](https://arxiv.org/abs/2010.11929)   | Vision Transformer architecture for image classification                                              | [vit](./implementations/vit)                      |
