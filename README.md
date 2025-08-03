@@ -1,6 +1,6 @@
 # 🧬 Histopathology Foundation Models
 
-Welcome! This repository is inspired by the excellent review by [Bilal et al. (2025)](https://arxiv.org/abs/2502.08333) on foundation models in computational pathology. It aims to be your **one-stop resource** for understanding and implementing foundation models in histopathology.
+This repository is inspired by the excellent review by [Bilal et al. (2025)](https://arxiv.org/abs/2502.08333) on foundation models in computational pathology. It aims to be your **one-stop resource** for understanding and implementing foundation models in histopathology.
 
 Whether you're a **student**, **researcher**, or **practitioner**, this repo will help you:
 
