@@ -22,17 +22,6 @@ Aggregation helps:
 | **Transformer Aggregation** | ✅ | Uses **transformer self-attention** to model relationships between patches and produce a global token or aggregate feature. | ✅ Captures rich interactions<br>✅ Scales well with data<br>✅ Powerful for WSI classification | ❌ Memory intensive<br>❌ Longer training time | TransMIL, UNI, UNIv2, RudolfV |
 | **Learnable Pooling (NetVLAD, DeepSets, etc.)** | ✅ | Advanced aggregation techniques for unordered inputs. NetVLAD uses soft assignments to learned cluster centers. DeepSets use permutation-invariant architectures. | ✅ Models global structure<br>✅ Flexible | ❌ Less interpretable<br>❌ Heavier to tune | PathFormer, retrieval models |
 
----
-
-## 📚 Why Aggregation Matters
-
-In WSI-based diagnosis:
-- The **slide label** applies globally but individual patches may or may not be relevant.
-- Aggregation acts as a **bottleneck**, deciding which features dominate the final decision.
-- It balances **signal vs. noise**, **context vs. detail**, and **interpretability vs. flexibility**.
-
----
-
 ## 🔍 Detailed Formula Explanation (Attention-based MIL)
 
 From Ilse et al., 2018:
