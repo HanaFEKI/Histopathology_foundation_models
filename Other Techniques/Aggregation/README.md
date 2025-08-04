@@ -11,7 +11,7 @@ Aggregation helps:
 - Preserve global context from localized features
 - Enable end-to-end learning from weak labels (WSI-level)
 
-## 🧠 Aggregation Techniques
+## 🧠 Aggregation Methods
 
 | **Method** | **Learnable** | **Description** | **Pros** | **Cons** | **Example Models** |
 |------------|---------------|-----------------|----------|----------|---------------------|
