@@ -11,14 +11,6 @@ Aggregation helps:
 - Preserve global context from localized features
 - Enable end-to-end learning from weak labels (WSI-level)
 
-# 🔄 Aggregation Methods in Computational Pathology
-
-In histopathology, Whole Slide Images (WSIs) are too large to be processed directly. They are divided into patches, each represented by an embedding. Aggregation methods are critical for combining these **patch-level features** into a **slide-level representation**.
-
-This is a cornerstone for techniques like **Multiple Instance Learning (MIL)** used in weakly supervised learning setups (slide-level labels, no patch-level labels).
-
----
-
 ## 🧠 Aggregation Techniques
 
 | **Method** | **Learnable** | **Description** | **Pros** | **Cons** | **Example Models** |
@@ -49,7 +41,7 @@ From Ilse et al., 2018:
 z = \sum_{i=1}^{n} \alpha_i h_i \quad \text{where } \alpha_i = \frac{\exp(w^T \tanh(Vh_i^T))}{\sum_j \exp(w^T \tanh(Vh_j^T))}
 ```
 
-| Symbol | Meaning |
+| Variable | Meaning |
 |--------|---------|
 | \( h_i \in \mathbb{R}^d \) | Embedding of patch \(i\) |
 | \( z \in \mathbb{R}^d \) | Aggregated slide-level embedding |
