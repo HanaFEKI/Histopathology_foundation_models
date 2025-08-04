@@ -39,7 +39,9 @@ Introduced in the seminal work of [Ilse et al., 2018](https://arxiv.org/abs/1802
 - **Cons:** Slightly more compute; may overfit on small datasets
 
 **Key Formula:**
-> \( z = \sum_{i=1}^{n} \alpha_i h_i \quad \text{where } \alpha_i = \frac{\exp(w^T \tanh(Vh_i^T))}{\sum_j \exp(w^T \tanh(Vh_j^T))} \)
+```math
+ z = \sum_{i=1}^{n} \alpha_i h_i \quad \text{where } \alpha_i = \frac{\exp(w^T \tanh(Vh_i^T))}{\sum_j \exp(w^T \tanh(Vh_j^T))}
+```
 
 **Example Models:**
 - CLAM (Lu et al., 2021)
