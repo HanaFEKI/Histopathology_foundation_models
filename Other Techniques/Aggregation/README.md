@@ -22,9 +22,9 @@ Aggregation helps:
 | **Transformer Aggregation** | ✅ | Uses **transformer self-attention** to model relationships between patches and produce a global token or aggregate feature. | ✅ Captures rich interactions<br>✅ Scales well with data<br>✅ Powerful for WSI classification | ❌ Memory intensive<br>❌ Longer training time | TransMIL, UNI, UNIv2, RudolfV |
 | **Learnable Pooling (NetVLAD, DeepSets, etc.)** | ✅ | Advanced aggregation techniques for unordered inputs. NetVLAD uses soft assignments to learned cluster centers. DeepSets use permutation-invariant architectures. | ✅ Models global structure<br>✅ Flexible | ❌ Less interpretable<br>❌ Heavier to tune | PathFormer, retrieval models |
 
-## 🔍 Detailed Formula Explanation (Attention-based MIL)
+### 🔍 Formula of Attention-based MIL
 
-From Ilse et al., 2018:
+From [Ilse et al., 2018](https://arxiv.org/abs/1802.04712):
 
 ``` math
 z = \sum_{i=1}^{n} \alpha_i h_i \quad \text{where } \alpha_i = \frac{\exp(w^T \tanh(Vh_i^T))}{\sum_j \exp(w^T \tanh(Vh_j^T))}
