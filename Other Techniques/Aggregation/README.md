@@ -32,12 +32,12 @@ z = \sum_{i=1}^{n} \alpha_i h_i \quad \text{where } \alpha_i = \frac{\exp(w^T \t
 
 | Variable | Meaning |
 |--------|---------|
-| \( h_i \in \mathbb{R}^d \) | Embedding of patch \(i\) |
-| \( z \in \mathbb{R}^d \) | Aggregated slide-level embedding |
-| \( V \in \mathbb{R}^{l \times d} \) | Weight matrix for attention |
-| \( w \in \mathbb{R}^l \) | Weight vector to score each patch |
-| \( \tanh \) | Activation function (nonlinearity) |
-| \( \alpha_i \) | Importance score of patch \(i\), normalized with softmax |
+|  ``` h_i``` | Embedding of patch \(i\) |
+|  ```z``` | Aggregated slide-level embedding |
+|  ```V``` | Weight matrix for attention |
+| ``` w ``` | Weight vector to score each patch |
+| ``` tanh ``` | Activation function (nonlinearity) |
+| ``` alpha_i ``` | Importance score of patch \(i\), normalized with softmax |
 
 
 ## 📂 References
