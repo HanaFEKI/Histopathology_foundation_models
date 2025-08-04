@@ -52,7 +52,9 @@ Introduced in the seminal work of [Ilse et al., 2018](https://arxiv.org/abs/1802
 ### 4. 🧠 **Gated Attention (Gated MIL)**
 A refinement of attention-based MIL that combines both **tanh** and **sigmoid** nonlinearities for better gating.
 
-> \( \alpha_i = \frac{\exp(w^T (\tanh(Vh_i^T) \odot \sigma(Uh_i^T)))}{\sum_j \exp(w^T (\tanh(Vh_j^T) \odot \sigma(Uh_j^T)))} \)
+```math
+ \alpha_i = \frac{\exp(w^T (\tanh(Vh_i^T) \odot \sigma(Uh_i^T)))}{\sum_j \exp(w^T (\tanh(Vh_j^T) \odot \sigma(Uh_j^T)))}
+ ```
 
 - **Pros:** Better patch selection control
 - **Cons:** Slightly more complex to train
