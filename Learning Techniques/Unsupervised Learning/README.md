@@ -1,4 +1,4 @@
-# Unsupervised Learning in Computational Pathology
+# Unsupervised Learning
 
 ## Overview
 
