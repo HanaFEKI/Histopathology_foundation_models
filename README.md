@@ -6,7 +6,7 @@ Whether you're a **student**, **researcher**, or **practitioner**, this repo wil
 
 - ✅ Understand the **core concepts** behind foundation models for medical imaging.  
 - 🔍 Access **modular PyTorch implementations** of key models.  
-- 📓 Explore **real-life examples and notebooks** that demonstrate practical usage.  
+- 📓 Explore **real-life examples** that demonstrate practical usage.  
 - 🌍 Discover **beyond-histopathology applications** in broader medical vision tasks.
 
 > 🔖 *"I wish I had this repo when I started my internship. It would’ve saved me hours of searching, testing, and debugging. So I created what I wish I had."* — **Hana FEKI**
