@@ -37,7 +37,7 @@ z = \sum_{i=1}^{n} \alpha_i h_i \quad \text{where }
 
 #### 🔍 Explanation of Terms
 
-| Symbol     | Meaning                                         |
+| Variable   | Meaning                                         |
 |------------|-------------------------------------------------|
 | `h_i`      | Feature vector of instance `i`                  |
 | `z`        | Aggregated global representation                |
@@ -59,7 +59,7 @@ A variant also from [Ilse et al., 2018], using both **tanh and sigmoid** activat
 
 #### 🔍 Explanation of Terms
 
-| Symbol         | Meaning                                                   |
+| Variable       | Meaning                                                   |
 |----------------|-----------------------------------------------------------|
 | `U`            | Weight matrix for the sigmoid gate                        |
 | `σ(U h_i^T)`   | Sigmoid gate (importance controller)                      |
