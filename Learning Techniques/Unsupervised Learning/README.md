@@ -4,8 +4,6 @@
 
 Unsupervised learning is a branch of machine learning where models learn patterns, structures, or representations from data **without labeled outputs**. Unlike supervised learning, it does not rely on annotated data but instead discovers the inherent distribution and features within the data itself.
 
----
-
 ## Key Concepts
 
 - **Goal:** Extract meaningful patterns, clusters, or features from unlabeled data.
@@ -43,11 +41,4 @@ Computational pathology uses computational tools to analyze digital pathology im
 
 ## Further Reading
 
-For an in-depth survey of recent advances in unsupervised and semi-supervised deep learning, see:  
-[Semi-Supervised and Unsupervised Deep Visual Learning: A Survey](https://arxiv.org/abs/2208.11296)
-
----
-
-## Summary
-
-Unsupervised learning unlocks the potential of large-scale unlabeled pathology datasets by revealing hidden structures, enabling novel discoveries, and improving automated diagnostic systems, thus accelerating progress in computational pathology.
+For an in-depth survey of recent advances in unsupervised and semi-supervised deep learning, see:  [Semi-Supervised and Unsupervised Deep Visual Learning: A Survey](https://arxiv.org/abs/2208.11296)
