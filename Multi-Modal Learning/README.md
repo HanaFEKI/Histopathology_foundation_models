@@ -6,7 +6,7 @@ In the context of **histopathology**, this means building models that can simult
 - **Whole-slide images (WSIs)** of tissue samples,
 - **Clinical variables** (e.g., age, treatment, survival),
 - **Molecular data** (e.g., gene expression, mutations),
-- **Radiology scans**, and even
+- **Radiology scans**,
 - **Textual reports or pathology notes**.
 
 ---
