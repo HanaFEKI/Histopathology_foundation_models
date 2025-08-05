@@ -11,9 +11,9 @@ Whether you're a **student**, **researcher**, or **practitioner**, this repo wil
 
 > 🔖 *"I wish I had this repo when I started my internship. It would’ve saved me hours of searching, testing, and debugging. So I created what I wish I had."* — **Hana FEKI**
 ---
-## Definition of a Foundation Model
-
-A foundation model is a model that is trained on large amount of data (Most of the time multi-model), and then with the high-dimensional (e.g 2048 for ResNET50 encoder) features extracted, we add MLP on it to perform downstream tasks.
+## 🔍 What's a Foundation Model?
+A foundation model is a large-scale model trained on massive and diverse datasets (often multimodal, such as images, text, or both) in a self-supervised or weakly supervised manner. These models learn general-purpose, high-dimensional representations that capture broad knowledge about the data domain.
+Once trained, the frozen encoder can be adapted to a variety of downstream tasks (e.g., classification, segmentation, captioning) by attaching lightweight modules such as MLPs (Multi-Layer Perceptrons) or task-specific heads — often with little or no additional fine-tuning.
 
 ## Required Knowledge
 
