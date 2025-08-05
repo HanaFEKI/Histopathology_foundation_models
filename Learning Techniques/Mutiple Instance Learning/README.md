@@ -1,4 +1,4 @@
-# Multiple Instance Learning (MIL) in Computational Pathology
+# Multiple Instance Learning (MIL)
 
 ## Overview
 
