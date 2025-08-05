@@ -8,7 +8,7 @@ Self-Supervised Learning (SSL) is a paradigm where models learn meaningful repre
 
 This README provides an **introductory overview** of Self-Supervised Learning. The detailed techniques are explored in the respective folders of this repository.
 
-### 1. 🔄 [Contrastive Learning] (../../Contrastive%20Learning/)
+### 1. 🔄 [Contrastive Learning](../../Contrastive%20Learning/)
 
 Learns by pulling together positive pairs (e.g., augmented views of the same image) and pushing apart negative pairs.
 
