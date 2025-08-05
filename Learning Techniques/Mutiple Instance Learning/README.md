@@ -19,8 +19,6 @@ In MIL, the data is organized into **bags**, each containing many instances (e.g
 - **Scalability:**  
   MIL enables training models on whole-slide images (WSIs) by treating them as bags of smaller patches, avoiding exhaustive manual labeling.
 
----
-
 ## Core Concepts
 
 - **Bags and instances:**  
@@ -34,8 +32,6 @@ In MIL, the data is organized into **bags**, each containing many instances (e.g
 
 - **Model workflow:**  
   Models typically extract features from instances, then aggregate instance-level information to predict the bag label (see the aggregation folder for detailed techniques).
-
----
 
 ## Importance in Computational Pathology
 
@@ -61,14 +57,3 @@ In MIL, the data is organized into **bags**, each containing many instances (e.g
   Ilse et al., “Attention-based Deep Multiple Instance Learning” (2018) [https://arxiv.org/abs/1802.04712]  
 - **MIL in computational pathology:**  
   Campanella et al., “Clinical-grade computational pathology using weakly supervised deep learning on whole slide images” (2019) [https://www.nature.com/articles/s41591-019-0508-1]
-
----
-
-## Summary
-
-Multiple Instance Learning is a powerful paradigm for handling weakly labeled pathology data, enabling effective learning from slide-level annotations and driving advances in automated disease detection with minimal annotation overhead.
-
----
-
-Feel free to explore the [aggregation techniques folder] for detailed pooling and aggregation strategies applied in MIL.
-
