@@ -48,7 +48,8 @@ In this table, techniques are grouped by research category and ordered by their 
 ---
 ## 🧠 Foundation Models in Computational Pathology
 
-A curated list of foundational and large-scale models for computational pathology. This table categorizes each model by its learning paradigm and highlights core innovations and downstream capabilities.
+A curated list of foundational and large-scale models for computational pathology. 
+These tables categorize each model by its learning paradigm and highlights core innovations and downstream capabilities.
 
 
 ### Self-Supervised Learning (SSL)
