@@ -49,9 +49,5 @@ In MIL, the data is organized into **bags**, each containing many instances (e.g
 
 ## References and Further Reading
 
-- **Foundational paper:**  
-  Dietterich et al., “Solving the Multiple Instance Problem with Axis-Parallel Rectangles” (1997)  
-- **Recent MIL survey:**  
-  Ilse et al., “Attention-based Deep Multiple Instance Learning” (2018) [https://arxiv.org/abs/1802.04712]  
-- **MIL in computational pathology:**  
-  Campanella et al., “Clinical-grade computational pathology using weakly supervised deep learning on whole slide images” (2019) [https://www.nature.com/articles/s41591-019-0508-1]
+- **Recent MIL survey:**  [Ilse et al., Attention-based Deep Multiple Instance Learning (2018)](https://arxiv.org/abs/1802.04712) 
+- **MIL in computational pathology:**  [Campanella et al., Clinical-grade computational pathology using weakly supervised deep learning on whole slide images (2019)](https://www.nature.com/articles/s41591-019-0508-1)
