@@ -1,6 +1,6 @@
 # Multi-Modal Learning
 
-**Multi-modal learning** refers to machine learning models that can learn from and integrate multiple data modalities — such as images, text, genomic profiles, or clinical metadata — to generate richer and more accurate predictions or insights.
+**Multi-modal learning** refers to machine learning models that can learn from and integrate multiple data modalities (such as images, text, genomic profiles, or clinical metadata) to generate richer and more accurate predictions or insights.
 
 In the context of **histopathology**, this means building models that can simultaneously analyze:
 - **Whole-slide images (WSIs)** of tissue samples,
@@ -56,16 +56,16 @@ The fused representation is used to optimize one or more downstream tasks: class
 
 ## 🔬 Impact on Histopathology Research
 
-### ✅ 1. **Improved Performance**
+### 1. **Improved Performance**
 Multi-modal models often **outperform single-modal models**, especially in prognostic or survival tasks, by combining image and non-image data.
 
-### ✅ 2. **Weak Supervision & Label Efficiency**
+### 2. **Weak Supervision & Label Efficiency**
 By leveraging rich patient-level labels (e.g., survival time), models can learn useful visual features without needing precise ROI annotations — **helping overcome the annotation bottleneck**.
 
-### ✅ 3. **Clinical Translation**
+### 3. **Clinical Translation**
 Integrating clinical variables directly into histopathology models makes them **more interpretable** and **clinically applicable**, helping bridge the gap between ML research and real-world usage.
 
-### ✅ 4. **Biological Discovery**
+### 4. **Biological Discovery**
 Cross-modal attention or attribution maps can reveal **clinically relevant features**, such as mutations associated with specific tissue morphologies — guiding future biological research.
 
 ---
