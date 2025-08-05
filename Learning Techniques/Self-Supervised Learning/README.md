@@ -42,7 +42,7 @@ Predict missing or masked parts of the input.
 | **BEiT** | [BEiT](https://arxiv.org/abs/2106.08254) | Predict visual tokens using transformer |
 | **MIM** | [Masked Image Modeling: A Survey](https://arxiv.org/abs/2408.06687) | Generic framework for masked modeling |
 
-➡️ See: [`Masked Modeling/`](Histopathology_foundation_models/Masked%20Modeling/)
+➡️ See: [`Masked Modeling/`](../../Masked%20Modeling/)
 
 ---
 
