@@ -27,7 +27,7 @@ Learns by pulling together positive pairs (e.g., augmented views of the same ima
 | **MoCo** | [Momentum Contrast](https://arxiv.org/abs/1911.05722) | Momentum encoder + dynamic queue |
 | **CLIP** | [CLIP](https://arxiv.org/abs/2103.00020) | Contrastive loss between image-text pairs |
 
-➡️ See: [`Contrastive Learning/`](../Contrastive%20Learning/)
+➡️ See: [`Contrastive Learning/`](../../Contrastive%20Learning/)
 
 
 ### 2. 🎭 Masked Modeling
@@ -58,7 +58,7 @@ Learns by training a model (student) to imitate a slowly updated teacher.
 | **DINOv2** | [DINOv2](https://arxiv.org/abs/2304.07193) | Stronger recipe and large-scale training |
 | **BYOL** | [BYOL](https://arxiv.org/abs/2006.07733) | Learns without negative samples |
 
-➡️ See: [`Self-Distillation/`](Histopathology_foundation_models/Self-Distillation/)
+➡️ See: [`Self-Distillation/`](../../Self-Distillation/)
 
 ## 🧩 Other SSL Techniques
 
