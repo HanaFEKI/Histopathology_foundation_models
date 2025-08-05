@@ -27,7 +27,7 @@ Learns by pulling together positive pairs (e.g., augmented views of the same ima
 | **MoCo** | [Momentum Contrast](https://arxiv.org/abs/1911.05722) | Momentum encoder + dynamic queue |
 | **CLIP** | [CLIP](https://arxiv.org/abs/2103.00020) | Contrastive loss between image-text pairs |
 
-➡️ See: [`Contrastive Learning/`](Histopathology_foundation_models/Contrastive%20Learning/)
+➡️ See: [`Contrastive Learning/`](../Contrastive%20Learning/)
 
 
 ### 2. 🎭 Masked Modeling
