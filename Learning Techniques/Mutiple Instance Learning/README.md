@@ -43,7 +43,7 @@ In MIL, the data is organized into **bags**, each containing many instances (e.g
   MIL models help detect and localize disease areas implicitly, improving accuracy and interpretability without requiring dense labels.
 
 - **Flexibility:**  
-  MIL frameworks can incorporate different feature extractors, instance encoders, and pooling/aggregation strategies (see your aggregation folder for details).
+  MIL frameworks can incorporate different feature extractors, instance encoders, and pooling/aggregation strategies (check the [aggregation folder](../../Other%20Techniques/Aggregation/) for details).
 
 ---
 
