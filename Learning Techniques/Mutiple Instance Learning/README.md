@@ -1,7 +1,5 @@
 # Multiple Instance Learning (MIL)
 
-## Overview
-
 Multiple Instance Learning (MIL) is a specialized form of supervised learning designed to handle **weakly labeled data**, where labels are provided at a **bag level** rather than on individual instances within the bag.
 
 In MIL, the data is organized into **bags**, each containing many instances (e.g., image patches). The label is associated only with the entire bag — not with each instance — making MIL especially useful when precise annotations are unavailable or costly.
