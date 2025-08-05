@@ -53,11 +53,13 @@ A curated list of foundational and large-scale models for computational patholog
 
 ### Self-Supervised Learning (SSL)
 
-| Model   | Paper / Link                                         | Key Innovation                                                      | Slides    | Report Gen. | Vision+Lang | Captioning |
-| ------- | ---------------------------------------------------- | ------------------------------------------------------------------- | --------- | ----------- | ----------- | ---------- |
-| Virchow | [arXiv:2309.07778](https://arxiv.org/pdf/2309.07778) | Global & local crops + morphology-preserving ECT augmentations      | 1,488,550 | ✅           | ✅           | ❌          |
-| UNI     | —                                                    | MIM + self-distillation with Sinkhorn & KoLeo regularization        | 100,000   | ✅           | ✅           | ✅          |
-| Phikon  | [arXiv:2311.11023](https://arxiv.org/abs/2311.11023) | iBOT-based masked self-distillation; robust to visual perturbations | 6,093     | ✅           | ✅           | ✅          |
+| Model     | Paper / Link                                         | Key Innovation                                                      | Slides    | Report Gen. | Vision+Lang | Captioning |
+| --------- | ---------------------------------------------------- | ------------------------------------------------------------------- | --------- | ----------- | ----------- | ---------- |
+| Virchow   | [arXiv:2309.07778](https://arxiv.org/pdf/2309.07778) | Global & local crops + morphology-preserving ECT augmentations      | 1,488,550 | ✅           | ✅           | ❌          |
+| UNI       | —                                                    | MIM + self-distillation with Sinkhorn & KoLeo regularization        | 100,000   | ✅           | ✅           | ✅          |
+| Phikon    | [arxiv:2311.11023](https://arxiv.org/abs/2311.11023) | iBOT-based masked self-distillation; robust to visual perturbations | 6,093     | ✅           | ✅           | ✅          |
+| Univ2     | [arXiv:2404.xxxxx](https://arxiv.org/abs/2404.xxxxx) | [Add key innovation here]                                           | [Slides]  | [Report]    | [Vision+Lang] | [Captioning] |
+| ProvGigapath | [arXiv:xxxx.xxxxx](https://arxiv.org/abs/xxxx.xxxxx) | [Add key innovation here]                                           | [Slides]  | [Report]    | [Vision+Lang] | [Captioning] |
 
 
 ### Masked Image Modeling (MIM)
@@ -82,7 +84,6 @@ A curated list of foundational and large-scale models for computational patholog
 | Model    | Paper / Link                                         | Key Innovation                                                          | Slides    | Report Gen. | Vision+Lang | Captioning |
 | -------- | ---------------------------------------------------- | ----------------------------------------------------------------------- | --------- | ----------- | ----------- | ---------- |
 | Virchow2 | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870) | Trained on 3.1M WSIs; diverse data and pathology-inspired augmentations | 3,134,922 | ✅           | ✅           | ❌          |
-
 ---
 
 More categories and models will be added progressively as we parse the landscape of generative pathology models and language-vision integrations.
