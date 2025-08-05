@@ -22,23 +22,73 @@ Aggregation helps:
 | **Transformer Aggregation** | ✅ | Uses **transformer self-attention** to model relationships between patches and produce a global token or aggregate feature. | ✅ Captures rich interactions<br>✅ Scales well with data<br>✅ Powerful for WSI classification | ❌ Memory intensive<br>❌ Longer training time | TransMIL, UNI, UNIv2, RudolfV |
 | **Learnable Pooling (NetVLAD, DeepSets, etc.)** | ✅ | Advanced aggregation techniques for unordered inputs. NetVLAD uses soft assignments to learned cluster centers. DeepSets use permutation-invariant architectures. | ✅ Models global structure<br>✅ Flexible | ❌ Less interpretable<br>❌ Heavier to tune | PathFormer, retrieval models |
 
-### 🔍 Formula of Attention-based MIL
 
-From [Ilse et al., 2018](https://arxiv.org/abs/1802.04712):
 
-``` math
-z = \sum_{i=1}^{n} \alpha_i h_i \quad \text{where } \alpha_i = \frac{\exp(w^T \tanh(Vh_i^T))}{\sum_j \exp(w^T \tanh(Vh_j^T))}
+### 🔷 1. Attention-Based MIL
+
+From [Ilse et al., 2018](https://arxiv.org/abs/1802.04712), this method learns **attention weights** to determine the importance of each instance (e.g., patch).
+
+#### 📘 Formula
+
+```math
+z = \sum_{i=1}^{n} \alpha_i h_i \quad \text{where } 
+\alpha_i = \frac{\exp(w^T \tanh(V h_i^T))}{\sum_{j=1}^{n} \exp(w^T \tanh(V h_j^T))}
 ```
 
-| Variable | Meaning |
-|--------|---------|
-|  ``` h_i``` | Embedding of patch ```i``` |
-|  ```z``` | Aggregated slide-level embedding |
-|  ```V``` | Weight matrix for attention |
-| ``` w ``` | Weight vector to score each patch |
-| ``` tanh ``` | Activation function (nonlinearity) |
-| ``` alpha_i ``` | Importance score of patch ```i```, normalized with softmax |
+#### 🔍 Explanation of Terms
 
+| Symbol     | Meaning                                         |
+|------------|-------------------------------------------------|
+| `h_i`      | Feature vector of instance `i`                  |
+| `z`        | Aggregated global representation                |
+| `V`        | Weight matrix applied to each instance (`tanh`) |
+| `w`        | Weight vector to score each transformed patch   |
+| `α_i`      | Attention weight for instance `i` (softmax)     |
+| `tanh`     | Non-linearity improving expressiveness          |
+
+
+### 🔶 2. Gated Attention MIL
+
+A variant also from [Ilse et al., 2018], using both **tanh and sigmoid** activations to introduce a gating mechanism.
+
+#### 📘 Formula
+
+```math
+\alpha_i = \frac{\exp(w^T ( \tanh(V h_i^T) \odot \sigma(U h_i^T) ))}{\sum_{j=1}^{n} \exp(w^T ( \tanh(V h_j^T) \odot \sigma(U h_j^T) ))}
+```
+
+#### 🔍 Explanation of Terms
+
+| Symbol         | Meaning                                                   |
+|----------------|-----------------------------------------------------------|
+| `U`            | Weight matrix for the sigmoid gate                        |
+| `σ(U h_i^T)`   | Sigmoid gate (importance controller)                      |
+| `⊙`            | Element-wise multiplication (gating between two branches) |
+| Rest           | Same as above                                             |
+
+### ⚖️ Comparison
+
+| Feature                | Attention MIL                        | Gated Attention MIL                    |
+|------------------------|--------------------------------------|----------------------------------------|
+| Learnable Parameters   | `V`, `w`                             | `V`, `U`, `w`                          |
+| Activation Functions   | `tanh`                               | `tanh` + `sigmoid`                     |
+| Gating                 | ❌                                   | ✅                                     |
+| Expressiveness         | Medium                               | High                                  |
+| Complexity             | Low                                  | Moderate                              |
+| Usage Examples         | CLAM, TransMIL, iBOT                 | CLAM-Gated, ABCMIL                    |
+
+
+## 📂 Implementations
+You can find implementations or scripts for several of these aggregation types in:
+
+| File                      | Description                                |
+|---------------------------|--------------------------------------------|
+| `mean_pooling.py`         | Implements average (mean) pooling          |
+| `attention_pooling.py`    | Implements standard attention-based MIL    |
+| `gated_attention.py`      | Implements gated attention-based MIL       |
+| `transformer_agg.py`      | Aggregation using Transformer encoder      |
+
+---
 
 ## 📂 References
 
@@ -48,14 +98,5 @@ z = \sum_{i=1}^{n} \alpha_i h_i \quad \text{where } \alpha_i = \frac{\exp(w^T \t
 - UNI/UNIv2 — [Virchow Repo](https://github.com/BatsResearch/Virchow)
 - ABCMIL, iBOT — see relevant GitHub implementations
 
-## Implementation
-
-You can find implementations or scripts for several of these aggregation types in:
-``` bash
-./explanations/aggregation/mean_pooling.py
-./explanations/aggregation/attention_pooling.py
-./explanations/aggregation/gated_attention.py
-./explanations/aggregation/transformer_agg.py
-```
 
 > 🛠️ Feel free to extend this by plugging in your models and observing which aggregation style best suits your pathology tasks!
