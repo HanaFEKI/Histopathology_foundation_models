@@ -49,7 +49,7 @@ z = \sum_{i=1}^{n} \alpha_i h_i \quad \text{where }
 
 ### 🔶 2. Gated Attention MIL
 
-A variant also from [Ilse et al., 2018](https://arxiv.org/abs/1802.04712) , using both **tanh and sigmoid** activations to introduce a gating mechanism.
+A variant also from [Ilse et al., 2018](https://arxiv.org/abs/1802.04712), using both `tanh` and `sigmoid` activations to introduce a gating mechanism.
 
 #### 📘 Formula
 
