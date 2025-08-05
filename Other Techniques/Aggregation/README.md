@@ -46,6 +46,7 @@ z = \sum_{i=1}^{n} \alpha_i h_i \quad \text{where }
 | `α_i`      | Attention weight for instance `i` (softmax)     |
 | `tanh`     | Non-linearity improving expressiveness          |
 
+![Attention-Based Aggregation](attention_agg.png)
 
 ### 🔶 2. Gated Attention MIL
 
