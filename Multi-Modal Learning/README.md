@@ -1,6 +1,4 @@
-# Multi-Modal Learning in Histopathology
-
-## 📌 Overview
+# Multi-Modal Learning
 
 **Multi-modal learning** refers to machine learning models that can learn from and integrate multiple data modalities — such as images, text, genomic profiles, or clinical metadata — to generate richer and more accurate predictions or insights.
 
