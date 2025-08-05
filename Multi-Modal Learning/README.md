@@ -9,7 +9,6 @@ In the context of **histopathology**, this means building models that can simult
 - **Radiology scans**,
 - **Textual reports or pathology notes**.
 
----
 
 ## 🚀 Why Multi-Modal Learning?
 
@@ -20,7 +19,6 @@ Single-modality models are inherently limited:
 
 By combining these data types, multi-modal learning enables **richer context**, **improved prediction performance**, and **more biologically grounded models**.
 
----
 
 ## 🔍 Key Use Cases in Histopathology
 
