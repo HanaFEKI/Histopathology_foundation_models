@@ -29,7 +29,7 @@ In MIL, the data is organized into **bags**, each containing many instances (e.g
   A bag is positive if it contains at least one positive instance; otherwise, it is negative.
 
 - **Model workflow:**  
-  Models typically extract features from instances, then aggregate instance-level information to predict the bag label (see the aggregation folder for detailed techniques).
+  Models typically extract features from instances, then aggregate instance-level information to predict the bag label (check the [aggregation folder](../../Other%20Techniques/Aggregation/) for detailed techniques).
 
 ## Importance in Computational Pathology
 
