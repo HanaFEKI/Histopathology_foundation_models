@@ -33,6 +33,9 @@ By combining these data types, multi-modal learning enables **richer context**, 
 
 ## 🧠 How Does It Work?
 
+![Muti-Modal Learning](multi-modal_process.png)
+
+
 ### 1. **Modality-specific encoders**
 Each data modality is first encoded using appropriate neural networks:
 - CNNs or vision transformers for **images**
