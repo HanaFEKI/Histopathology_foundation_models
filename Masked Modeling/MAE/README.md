@@ -1,4 +1,4 @@
-# 🔬 Masked Autoencoders (MAE) for Computational Histopathology
+# 🔬 Masked Autoencoders (MAE)
 
 **Masked Autoencoders (MAE)** are a type of self-supervised learning framework designed to learn rich visual representations from unlabeled images.
 
