@@ -2,6 +2,12 @@ import torch
 import numpy as np
 
 def random_masking(x, mask_ratio):
+    """
+    This function simulates the masking process used in Masked Autoencoders (MAE).
+    It shuffles patch tokens randomly, keeps a fraction (1 - mask_ratio), and masks
+    the rest. It returns the masked input, the binary mask indicating masked positions,
+    and the indices needed to restore the original sequence order during decoding.
+    """
     N, L, D = x.shape
     len_keep = int(L * (1 - mask_ratio))
 
