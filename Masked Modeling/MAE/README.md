@@ -3,6 +3,11 @@
 **Masked Autoencoders (MAE)** are a type of self-supervised learning framework designed to learn rich visual representations from unlabeled images.
 
 The key idea is simple yet powerful:
+
+![MAE_explained](mae_explained1.png)
+![MAE_explained](mae_explained2.png)
+
+
 - An input image is divided into fixed-size **patches**.
 - A large portion (typically **75%**) of these patches are **randomly masked**.
 - Only the remaining visible patches are passed through:
