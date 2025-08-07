@@ -69,12 +69,6 @@ MAE has been used as a backbone in many state-of-the-art models including:
 
 ## 📁 Repository Structure
 
-decoder.py
-ender.py
-loss.py
-patchify.py
-utils.py
-
 ```bash
 ├── Implementation/
 │   ├── encoder.py       # Transformer encoder for visible patches
