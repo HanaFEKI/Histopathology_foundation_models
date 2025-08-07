@@ -30,7 +30,6 @@ The key idea is simple yet powerful:
 - **Transferable Representations**: Pretrained encoders can be reused in various medical imaging tasks.
 - **Robust to Data Scarcity**: Especially useful in domains like pathology where annotation is expensive.
 
----
 
 ## 🧬 Is MAE Relevant for Computational Histopathology?
 
@@ -46,7 +45,6 @@ MAEs allow us to **pretrain vision models** on large unlabeled WSI (Whole Slide 
 
 By leveraging MAEs, we can build **foundation models** tailored for digital pathology — models that generalize well across tasks and datasets.
 
----
 
 ## 🏗️ Implementation
 
@@ -57,8 +55,6 @@ This repository includes a **PyTorch implementation of MAE**, inspired by the or
 - Plug in the encoder into downstream classification/segmentation heads.
 
 > ✅ Suitable for further customization with techniques like **LoRA**, **adapter layers**, or **prompt tuning**.
-
----
 
 ## 🧪 Examples of Foundation Models Using MAE
 
