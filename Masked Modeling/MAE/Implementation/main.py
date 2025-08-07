@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
-from mae.patchify import PatchEmbed
-from mae.encoder import MAEEncoder
-from mae.decoder import MAEDecoder
-from mae.utils import random_masking
+from Implementation.patchify import PatchEmbed
+from Implementation.encoder import MAEEncoder
+from Implementation.decoder import MAEDecoder
+from Implementation.utils import random_masking
 
 class MAE(nn.Module):
     def __init__(self, img_size=224, patch_size=16, in_chans=3,
