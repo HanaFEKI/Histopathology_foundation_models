@@ -70,7 +70,7 @@ MAE has been used as a backbone in many state-of-the-art models including:
 ## 📁 Repository Structure
 
 ```bash
-├── mae/
+├── Implementation/
 │   ├── encoder.py       # Transformer encoder for visible patches
 │   ├── decoder.py       # Transformer decoder for reconstruction
 │   ├── model.py         # Combined MAE model
@@ -78,5 +78,4 @@ MAE has been used as a backbone in many state-of-the-art models including:
 │   └── utils.py         # Masking and patching utilities
 ├── train.py             # Pretraining script
 ├── fine_tune.py         # Fine-tuning on downstream task
-├── dataset.py           # Data loading and patch extraction
-├── README.md
+└── README.md
