@@ -69,11 +69,18 @@ MAE has been used as a backbone in many state-of-the-art models including:
 
 ## 📁 Repository Structure
 
+decoder.py
+ender.py
+loss.py
+patchify.py
+utils.py
+
 ```bash
 ├── Implementation/
 │   ├── encoder.py       # Transformer encoder for visible patches
 │   ├── decoder.py       # Transformer decoder for reconstruction
 │   ├── model.py         # Combined MAE model
+│   ├── patchify.py      # Patchifying the input image
 │   ├── loss.py          # Reconstruction loss
 │   └── utils.py         # Masking and patching utilities
 ├── train.py             # Pretraining script
