@@ -5,6 +5,8 @@ from mae.model import MAE
 from torchvision.datasets import CIFAR10
 from torchvision import transforms
 from torch.utils.data import DataLoader
+from Implementation.loss import mae_loss
+
 
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
@@ -17,7 +19,7 @@ loader = DataLoader(dataset, batch_size=32, shuffle=True)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = MAE().to(device)
 optimizer = optim.Adam(model.parameters(), lr=1e-4)
-criterion = nn.MSELoss()
+
 
 for epoch in range(10):
     model.train()
@@ -26,7 +28,7 @@ for epoch in range(10):
         imgs = imgs.to(device)
         preds, targets, mask = model(imgs)
 
-        loss = criterion(preds, targets)
+        loss = mae_loss(preds, targets, mask)
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
