@@ -71,20 +71,21 @@ These tables categorize each model by its learning paradigm and highlights core 
 
 | Model       | Backbone  | Params | WSIs  | Tiles | Learning Method | Link | Key Innovation | Common Use Case | 
 |------------|-----------|--------|-------|-------|----------------|----------------|----------------|----------------------|
-| [OmniScreen](https://arxiv.org/abs/2408.00738) | Virchow2 | 632M | 48K | - | Weakly-Supervised (on Virchow2 embeddings) | Leverages pretrained Virchow2 embeddings, scalable weak supervision | Predicting genomic biomarkers from WSIs, multi-cancer analysis | [Hugging Face](https://huggingface.co/owkin/omniscreen) |
-| [PathoDuet](https://arxiv.org/abs/XXXX.XXXX) | ViT-B | 86M | 11K | 13M | Multi-headed attention-based MIL | Uses multi-instance learning with attention to aggregate tile-level information | Slide-level classification, WSI-level phenotype prediction | - |
-| [REMEDIS](https://arxiv.org/abs/XXXX.XXXX) | ResNet-152 | 232M | 29K | - | SimCLR (contrastive learning) | Self-supervised contrastive learning for slide and tile embeddings | Multi-domain histopathology tasks, cross-stain generalization | - |
+| [OmniScreen]([https://arxiv.org/abs/2408.00738](https://arxiv.org/abs/2408.09554)) | Virchow2 | 632M | 48K | - | Weakly-Supervised (on Virchow2 embeddings) |[Hugging Face](https://huggingface.co/owkin/omniscreen) | Leveraging Virchow2 embeddings for weakly-supervised learning on MSK-IMPACT dataset. | Predicting genomic biomarkers from WSIs, multi-cancer analysis |
+| [PathoDuet]([https://arxiv.org/abs/XXXX.XXXX](https://arxiv.org/abs/2312.09894)) | ViT-B | 86M | 11K | 13M | Multi-headed attention-based MIL |[GitHub Repo](https://github.com/openmedlab/PathoDuet)| Custom self-supervised learning with cross-scale and cross-stain augmentations based on MoCoV3. | Slide-level classification, WSI-level phenotype prediction | 
+| [REMEDIS]([https://arxiv.org/abs/XXXX.XXXX](https://arxiv.org/abs/2205.09723)) | ResNet-152 | 232M | 29K | - | SimCLR (contrastive learning) | - | Utilizes SimCLR for contrastive learning to enhance feature representation. | Multi-domain histopathology tasks, cross-stain generalization |
 
 
 
 ### 3. Masked Image Modeling and Other SSL Methods
 
-| Model           | Backbone       | Params  | WSIs      | Embedding Size | SSL Method |
-|-----------------|----------------|---------|----------|----------------|------------|
-| BepH            | BEiTv2         | 86M     | 11K      | 11M            | BEiTv2 SSL |
-| iBOT            | -              | 43M     | -        | -              | Masked Image Modeling |
-| MoCoV3          | -              | 15M     | -        | -              | SRCL       |
-| PLUTO           | FlexiVit-S     | 22M     | 158K     | 195M           | DINOv2 + MAE + Fourier-loss |
+| Model    | Backbone     | Params | WSIs  | Tiles | Learning Method | Link | Key Innovation | Common Use Case |
+|----------|-------------|--------|-------|-----------------------|----------------|----------------|----------------|----------------------|
+| [BEPH](https://arxiv.org/abs/XXXX.XXXX) | BEiTv2      | 86M   | 11K  | 11M | BEiTv2 SSL | [GitHub Repo](https://github.com/Zhcyoung/BEPH) | Lightweight self-supervised BEiT-based model pretrained using Masked Image Modeling. | Tile-level representation, WSI-level downstream tasks |
+| [iBOT](https://www.owkin.com/publications/scaling-self-supervised-learning-for-histopathology-with-masked-image-modeling) | -           | 43M   | -    | -   | Masked Image Modeling | [GitHub Repo](https://github.com/owkin/HistoSSLscaling) |Self-supervised masked patch modeling | Feature learning for image reconstruction and pretraining | 
+| [MoCoV3](https://arxiv.org/abs/2104.02057) | -           | 15M   | -    | -   | SRCL | [Github Repo](https://github.com/facebookresearch/moco-v3) |Momentum contrastive learning adaptation for histopathology | Learning robust slide embeddings with contrastive loss |
+| [PLUTO](https://arxiv.org/abs/XXXX.XXXX) | FlexiVit-S  | 22M   | 158K | 195M | DINOv2 + MAE + Fourier-loss | Combines DINOv2 SSL with masked image modeling and Fourier-based loss | Multi-scale WSI, cellular and sub-cellular representation | - |
+
 
 
 ### 4. Other Notable Models
