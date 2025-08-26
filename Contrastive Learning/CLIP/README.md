@@ -29,6 +29,8 @@ This allows CLIP to generalize across tasks without task-specific retraining.
 4. **Training Objective**  
    - Contrastive loss: bring matching pairs closer, push non-matching pairs apart.  
 
+![Clip_explained](CLIP_explained.png)
+
 ---
 
 ## 🔹 Why CLIP is a Foundation Model
