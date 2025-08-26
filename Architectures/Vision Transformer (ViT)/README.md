@@ -28,7 +28,7 @@ X_{seq} = [x_1, x_2, ..., x_N]
 
 Similar to positional embeddings in text Transformers, ViT adds positional information:
 ```math
-X_{input} = [x_cls, x_1, x_2, ..., x_N] + E_{pos}
+X_{input} = [x_{cls}, x_1, x_2, ..., x_N] + E_{pos}
 ```
 
 - x_cls is a learnable class token used for image-level classification  
@@ -48,7 +48,7 @@ z_0 = X_input
 
 The final class embedding `z_cls` is used for downstream classification:
 ```math
-y_pred = MLPHead(z_cls)
+y_pred = MLPHead(z_{cls})
 ```
 
 ## 4. Key Differences from Text Transformer
@@ -71,12 +71,12 @@ Attention(Q, K, V) = softmax(Q K^T / sqrt(D)) V
 
 - **Class token** aggregates global information from all patches:
 ``` math
-z_cls = Attention(x_cls, [x_1, ..., x_N], [x_1, ..., x_N])
+z_{cls} = Attention(x_cls, [x_1, ..., x_N], [x_1, ..., x_N])
 ```
 
 - The final prediction is a simple linear projection of the class token:
 ``` math
-y_pred = W_o z_cls + b_o
+y_pred = W_o z_{cls} + b_o
 ```
 
 
