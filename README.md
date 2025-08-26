@@ -59,11 +59,11 @@ These tables categorize each model by its learning paradigm and highlights core 
 | [Virchow2](https://arxiv.org/abs/2408.00738) | ViT-H | 632M | 3.1M | 1.9B | DINOv2 | [Hugging Face](https://huggingface.co/paige-ai/Virchow2) | Multi-million WSI pretraining, improved generalization | Tile-level representation for large pathology datasets |
 | [Virchow2G](https://arxiv.org/html/2408.00738v1) | ViT-G | 1.9B | 3.1M | 1.9B | DINOv2 | [Hugging Face](https://huggingface.co/paige-ai/Virchow2) | Largest foundation model in pathology (1.9B params) | Multi-task WSI analysis, high generality and multipurpose use |
 | [Phikon-v2](https://arxiv.org/abs/2409.09173) | ViT-L | 307M | 58K | 456M | DINOv2 | [Hugging Face](https://huggingface.co/owkin/phikon-v2) | Pretrained on diverse tasks, focuses on MSI & biomarker prediction | Genomic biomarker prediction, WSI-level classification |
-| RudolfV | ViT-L | 307M | 103K | 750M | DINOv2 SSL | - | Pathologist-curated dataset, TME profiling, pan-stain robustness | Tumor microenvironment profiling, biomarker evaluation, slide-level tasks |
-| TissueConcepts | Swin Transformer | - | 7K | 1.7B | DINOv2 SSL | - | Multi-task supervised learning, strong generalization across tissue types | Multi-task classification, detection, segmentation |
-| Kaiko-ai | ViT-L | 303M | 29K | 50M | DINOv2 | - | Focused SSL on small datasets, efficient embedding learning | Cellular and tissue-level representation tasks |
-| UNI | ViT-L | 307M | 100K | 100M | DINOv2 | - | Early benchmark model across multiple tissue types | General-purpose WSI embedding, multi-task pathology evaluation |
-| Hibou-L | ViT-L | 307M | 1.1M | 512M | DINOv2 | - | Pretrained on 1M+ WSIs using DINOv2, excels at patch- and slide-level | Cell-level segmentation, classification, patch-level tasks |
+| [RudolfV](https://arxiv.org/abs/2401.04079) | ViT-L | 307M | 103K | 750M | DINOv2 SSL | - | Pathologist-curated dataset, TME profiling, pan-stain robustness | Tumor microenvironment profiling, biomarker evaluation, slide-level tasks |
+| [TissueConcepts](https://arxiv.org/abs/2409.03519) | Swin Transformer | - | 7K | 1.7B | DINOv2 SSL | - | Multi-task supervised learning, strong generalization across tissue types | Multi-task classification, detection, segmentation |
+| [Kaiko-ai](https://arxiv.org/abs/2404.15217) | ViT-L | 303M | 29K | 50M | DINOv2 | [Hugging Face](https://huggingface.co/kaiko-ai/midnight) | Focused SSL on small datasets, efficient embedding learning | Cellular and tissue-level representation tasks |
+| [UNI](https://arxiv.org/abs/2308.15474) | ViT-L | 307M | 100K | 100M | DINOv2 | [Hugging Face](https://huggingface.co/MahmoodLab/UNI) | Early benchmark model across multiple tissue types | General-purpose WSI embedding, multi-task pathology evaluation |
+| [Hibou-L](https://arxiv.org/abs/2406.05074) | ViT-L | 307M | 1.1M | 512M | DINOv2 | [Hugging Face](https://huggingface.co/histai/hibou-L) | Pretrained on 1M+ WSIs using DINOv2, excels at patch- and slide-level | Cell-level segmentation, classification, patch-level tasks |
 
 
 
