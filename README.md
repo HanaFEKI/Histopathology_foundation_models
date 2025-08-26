@@ -51,6 +51,59 @@ In this table, techniques are grouped by research category and ordered by their 
 A curated list of foundational and large-scale models for computational pathology. 
 These tables categorize each model by its learning paradigm and highlights core innovations and downstream capabilities.
 
+## 1. Self-Supervised DINO-based Models (Image-only)
+
+| Model           | Backbone       | Params  | WSIs      | Embedding Size | SSL Method | GitHub or Hugging Face
+|-----------------|----------------|---------|----------|----------------|------------|
+| [Virchow ViT-H](https://arxiv.org/abs/2309.07778)   | ViT-H          | 632M    | 1.5M     | 2B             | DINOv2     | [Hugging Face] (https://huggingface.co/paige-ai/Virchow)
+| [Virchow2](https://arxiv.org/abs/2408.00738)        | ViT-H          | 632M    | 3.1M     | 1.9B           | DINOv2     | [Hugging Face](https://huggingface.co/paige-ai/Virchow2)
+| Virchow2G       | ViT-G          | 1.9B    | 3.1M     | 1.9B           | DINOv2     |
+| Phikon-v2       | ViT-L          | 307M    | 58K      | 456M           | DINOv2     |
+| RudolfV         | ViT-L          | 307M    | 103K     | 750M           | DINOv2 SSL |
+| TissueConcepts  | Swin Transformer | -     | 7K       | 1.7B           | DINOv2 SSL |
+| Kaiko-ai        | ViT-L          | 303M    | 29K      | 50M            | DINOv2     |
+| UNI             | ViT-L          | 307M    | 100K     | 100M           | DINOv2     |
+| Hibou-L         | ViT-L          | 307M    | 1.1M     | 512M           | DINOv2     |
+
+
+## 2. Supervised Multi-task Learning / Weakly-Supervised Models
+
+| Model           | Backbone       | Params  | WSIs      | Embedding Size | Learning Method |
+|-----------------|----------------|---------|----------|----------------|----------------|
+| OmniScreen      | Virchow2       | 632M    | 48K      | -              | Weakly-Supervised (on Virchow2 embeddings) |
+| PathoDuet       | ViT-B          | 86M     | 11K      | 13M            | Multi-headed attention-based MIL |
+| REMEDIS         | ResNet-152     | 232M    | 29K      | -              | SimCLR (contrastive learning) |
+
+---
+
+## 3. Masked Image Modeling and Other SSL Methods
+
+| Model           | Backbone       | Params  | WSIs      | Embedding Size | SSL Method |
+|-----------------|----------------|---------|----------|----------------|------------|
+| BepH            | BEiTv2         | 86M     | 11K      | 11M            | BEiTv2 SSL |
+| iBOT            | -              | 43M     | -        | -              | Masked Image Modeling |
+| MoCoV3          | -              | 15M     | -        | -              | SRCL       |
+| PLUTO           | FlexiVit-S     | 22M     | 158K     | 195M           | DINOv2 + MAE + Fourier-loss |
+
+---
+
+## 4. Other Notable Models
+
+| Model           | Backbone       | Params  | WSIs      | Embedding Size | Learning Method |
+|-----------------|----------------|---------|----------|----------------|----------------|
+| BROW            | ViT-B          | 86M     | 11K      | 180M           | -              |
+| Phikon          | ViT-B          | 86M     | 10M      | 104M           | DINO SSL       |
+| HIPT            | ViT-HIPT       | 10M     | 11K      | 104M           | DINO SSL       |
+| Madeleine       | -              | -       | -        | -              | -              |
+| CONCH           | 86M            | -       | 23K      | 48M            | -              |
+| COBRA           | Mamba-2        | 15M     | 3,048    | -              | Self-supervised contrastive learning |
+
+
+
+
+
+
+
 
 ### Self-Supervised Learning (SSL)
 
