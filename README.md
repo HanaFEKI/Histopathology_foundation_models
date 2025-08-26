@@ -99,47 +99,5 @@ These tables categorize each model by its learning paradigm and highlights core 
 | CONCH           | 86M            | -       | 23K      | 48M            | -              |
 | COBRA           | Mamba-2        | 15M     | 3,048    | -              | Self-supervised contrastive learning |
 
-
-
-
-
-
-
-
-### Self-Supervised Learning (SSL)
-
-| Model     | Paper / Link                                         | Key Innovation                                                      | Slides    | Report Gen. | Vision+Lang | Captioning |
-| --------- | ---------------------------------------------------- | ------------------------------------------------------------------- | --------- | ----------- | ----------- | ---------- |
-| Virchow   | [arXiv:2309.07778](https://arxiv.org/pdf/2309.07778) | Global & local crops + morphology-preserving ECT augmentations      | 1,488,550 | ✅           | ✅           | ❌          |
-| UNI       | —                                                    | MIM + self-distillation with Sinkhorn & KoLeo regularization        | 100,000   | ✅           | ✅           | ✅          |
-| Phikon    | [arxiv:2311.11023](https://arxiv.org/abs/2311.11023) | iBOT-based masked self-distillation; robust to visual perturbations | 6,093     | ✅           | ✅           | ✅          |
-| Univ2     | [arXiv:2404.xxxxx](https://arxiv.org/abs/2404.xxxxx) | [Add key innovation here]                                           | [Slides]  | [Report]    | [Vision+Lang] | [Captioning] |
-| ProvGigapath | [arXiv:xxxx.xxxxx](https://arxiv.org/abs/xxxx.xxxxx) | [Add key innovation here]                                           | [Slides]  | [Report]    | [Vision+Lang] | [Captioning] |
-
-
-### Masked Image Modeling (MIM)
-
-| Model     | Paper / Link                                         | Key Innovation                                                                | Slides  | Report Gen. | Vision+Lang | Captioning |
-| --------- | ---------------------------------------------------- | ----------------------------------------------------------------------------- | ------- | ----------- | ----------- | ---------- |
-| Phikon-v2 | [arXiv:2311.11023](https://arxiv.org/abs/2311.11023) | ViT-L scaled; trained on 460M tiles; robust ensemble for biomarker prediction | 58,359  | ✅           | ✅           | ❌          |
-| PLUTO     | [arXiv:2403.00827](https://arxiv.org/abs/2403.00827) | Multi-scale MIM with Fourier loss for out-of-distribution robustness          | 158,852 | ✅           | ✅           | ✅          |
-
-
-### Hybrid / Expert-Inspired Learning
-
-| Model       | Paper / Link                                         | Key Innovation                                                                | Slides  | Report Gen. | Vision+Lang | Captioning |
-| ----------- | ---------------------------------------------------- | ----------------------------------------------------------------------------- | ------- | ----------- | ----------- | ---------- |
-| RudolfV     | [arXiv:2403.01821](https://arxiv.org/abs/2403.01821) | Trained with stain-specific augmentations and pathologist guidance            | 133,998 | ✅           | ✅           | ✅          |
-| H-Optimus-0 | —                                                    | ViT-G/14 with 40 transformer blocks for efficient high-dimensional processing | 500,000 | ✅           | ✅           | ❌          |
-| H-Optimus-1 | —                                                    | Variant of H-Optimus-0                                                        | 500,000 | ✅           | ✅           | ❌          |
-
-
-### Multimodal / Multitask Architectures (Hybrid)
-
-| Model    | Paper / Link                                         | Key Innovation                                                          | Slides    | Report Gen. | Vision+Lang | Captioning |
-| -------- | ---------------------------------------------------- | ----------------------------------------------------------------------- | --------- | ----------- | ----------- | ---------- |
-| Virchow2 | [arXiv:2403.10870](https://arxiv.org/abs/2403.10870) | Trained on 3.1M WSIs; diverse data and pathology-inspired augmentations | 3,134,922 | ✅           | ✅           | ❌          |
----
-
 More categories and models will be added progressively as we parse the landscape of generative pathology models and language-vision integrations.
 If you use or extend this repo, please cite the source papers and link back to this project. 🙏
