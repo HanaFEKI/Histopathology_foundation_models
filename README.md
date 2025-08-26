@@ -53,8 +53,6 @@ These tables categorize each model by its learning paradigm and highlights core 
 
 ## 1. Self-Supervised DINO-based Models (Image-only)
 
-# 🔹 Self-Supervised DINO-based Pathology Foundation Models
-
 | Model           | Backbone       | Params  | WSIs      | Embedding Size | SSL Method | GitHub / HF | Key Innovation | Common Use Case |
 |-----------------|----------------|---------|----------|----------------|------------|-------------|----------------|----------------|
 | [Virchow ViT-H](https://arxiv.org/abs/2309.07778) | ViT-H | 632M | 1.5M | 2B | DINOv2 | [Hugging Face](https://huggingface.co/paige-ai/Virchow) | High-resolution patch embedding, large-scale SSL | WSI-level representation, multi-task downstream tasks |
