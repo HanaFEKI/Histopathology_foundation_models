@@ -69,14 +69,10 @@ Histopathology images (WSIs, biopsy patches) present unique challenges:
 
 ## 🔹 Applications in Histopathology
 
-- **Cancer subtype classification**  
-  - Pretrain on unlabeled slides → fine-tune on limited labeled patches.  
+- **Cancer subtype classification** : Pretrain on unlabeled slides → fine-tune on limited labeled patches.  
 
-- **Tissue segmentation**  
-  - Masked reconstruction helps capture **cell boundaries and gland structures**.  
+- **Tissue segmentation** : Masked reconstruction helps capture **cell boundaries and gland structures**.  
 
-- **Survival prediction / outcome modeling**  
-  - MIM representations capture **subtle histological patterns** correlated with prognosis.  
+- **Survival prediction / outcome modeling** : MIM representations capture **subtle histological patterns** correlated with prognosis.  
 
-- **Cross-modality learning**  
-  - Combine histopathology with **radiology or genomic data** for multimodal prediction.
+- **Cross-modality learning** : Combine histopathology with **radiology or genomic data** for multimodal prediction.
