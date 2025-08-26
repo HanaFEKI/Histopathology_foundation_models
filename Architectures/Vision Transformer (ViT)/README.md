@@ -39,7 +39,7 @@ X_{input} = [x_{cls}, x_1, x_2, ..., x_N] + E_{pos}
 The sequence of patches is fed into a stack of Transformer encoder layers, exactly like the encoder we already explained:
 
 ``` math
-z_0 = X_input
+z_0 = X_{input}
 ```
 
 - Multi-head self-attention captures relationships between patches  
@@ -48,7 +48,7 @@ z_0 = X_input
 
 The final class embedding `z_cls` is used for downstream classification:
 ```math
-y_pred = MLPHead(z_{cls})
+y_{pred} = MLPHead(z_{cls})
 ```
 
 ## 4. Key Differences from Text Transformer
