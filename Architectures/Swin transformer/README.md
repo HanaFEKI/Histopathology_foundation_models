@@ -1,3 +1,37 @@
+# 🔹 Swin Transformer
+
+The **Swin Transformer** is a hierarchical Vision Transformer designed for computer vision tasks.  
+Unlike standard Vision Transformers (ViT), it introduces **shifted windows** to reduce computation and enable local-global feature representation.
+
+---
+
+## 1. Key Concepts
+
+1. **Hierarchical Representation**
+   - Images are represented at multiple scales
+   - Patch merging layers reduce spatial resolution while increasing feature dimension
+
+2. **Window-based Self-Attention**
+   - Self-attention is computed **within local windows**
+   - Reduces complexity from O(N^2) to O(M^2), where M is window size
+
+3. **Shifted Windows**
+   - Alternating layers **shift the window partitioning**
+   - Allows **cross-window connections** and captures global context
+
+---
+
+## 2. Pipeline Overview
+
+1. **Input Image**
+   - e.g., X ∈ ℝ^(H × W × C)
+
+2. **Patch Partition**
+   - Image is split into non-overlapping patches (like ViT)
+   - Each patch is projected to an embedding
+```math
+x_p = Flatten(X_{patch}) W_e + b_e
+```
 
 3. **Hierarchical Feature Extraction**
    - Stacked **Swin Transformer blocks** process features at multiple scales
