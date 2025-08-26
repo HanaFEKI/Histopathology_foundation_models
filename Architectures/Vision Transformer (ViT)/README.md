@@ -18,7 +18,7 @@ N = \frac{H \cdot W}{P^2}
 ```
 This produces a sequence:
 ```math
-X_seq = [x_1, x_2, ..., x_N]
+X_{seq} = [x_1, x_2, ..., x_N]
 ```
 
 - W_e ∈ R^(P^2 * C) × D is the patch embedding matrix  
@@ -28,7 +28,7 @@ X_seq = [x_1, x_2, ..., x_N]
 
 Similar to positional embeddings in text Transformers, ViT adds positional information:
 ```math
-X_input = [x_cls, x_1, x_2, ..., x_N] + E_pos
+X_{input} = [x_cls, x_1, x_2, ..., x_N] + E_{pos}
 ```
 
 - x_cls is a learnable class token used for image-level classification  
