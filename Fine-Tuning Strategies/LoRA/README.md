@@ -9,18 +9,18 @@ Instead of updating all model weights, LoRA injects **trainable low-rank matrice
 
 1. **Start with Pre-trained Model** : e.g., Transformer, ViT, BERT, or GPT model
 2. **Inject LoRA Layers** : 
-For a linear layer W, introduce low-rank matrices A and B
+For a linear layer `W`, introduce low-rank matrices `A` and `B`
    ```math
    W_{adapted} = W + alpha * (A @ B)
 
 3. **Freeze Original Weights** : 
-Only A and B are updated during fine-tuning
+Only `A` and `B` are updated during fine-tuning
 
 4. **Forward Pass** : 
-Input x passes through W_adapted instead of W
+Input `x` passes through `W_{adapted}` instead of `W`
 
-5. **Backpropagation** : 
-Gradients only flow through A and B, reducing memory and compute
+6. **Backpropagation** : 
+Gradients only flow through `A` and `B`, reducing memory and compute
 
 
 ## 2. Mathematical Formulation
@@ -37,7 +37,7 @@ W_{adapted} = W + alpha * (A @ B)
 ```math
 y = x W_{adapted}^T = x (W + alpha * A @ B)^T
 ```
-- A ∈ R^(out_features × r), B ∈ R^(r × in_features) with r ≪ min(out_features, in_features)
+- `A ∈ R^(out_features × r)`, `B ∈ R^(r × in_features)` with `r ≪ min(out_features, in_features)`
 
 
 ## 3. Key Advantages
