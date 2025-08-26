@@ -32,3 +32,6 @@ It improves representation quality by addressing stability and scalability issue
     ```math
     theta_{teacher} = m * theta_{teacher} + (1-m) * theta_{student}
     ```
+5. **Loss**
+   - Cross-entropy between teacher and student softmax probabilities
+   - Temperature and centering for stability
