@@ -15,19 +15,19 @@ It trains only a **linear classifier** on top of a frozen backbone to measure th
    features = backbone(x)
   
 3. **Linear Classifier**
-- Train a single linear layer on top of features:
+   - Train a single linear layer on top of features:
 ```math 
 logits = Linear(features)
 ```
 
 
 4. **Training**
-- Only update the linear classifier weights
-- Backbone remains unchanged
+   - Only update the linear classifier weights
+   - Backbone remains unchanged
 
 
 5. **Evaluation**
-- Accuracy or downstream metrics show representation quality
+   - Accuracy or downstream metrics show representation quality
 
 
 ## 2. Mathematical Formulation
