@@ -49,11 +49,6 @@ When applying CLIP to digital pathology, researchers often replace or adapt the 
 - **BioMegatron / BlueBERT** → large biomedical LMs that can serve as drop-in replacements for domain-specific language understanding.
 
 ---
-## 🔹 CLIP is a Foundation Model
-- **Scalable**: Trained on massive datasets, captures broad visual-linguistic knowledge.  
-- **Zero-Shot Learning**: Can classify new categories using text prompts, without retraining.  
-- **Multimodality**: Bridges vision and language, enabling flexible downstream tasks.  
-
 
 ## 🔹 Importance for Histopathology
 Histopathology produces massive, complex image data, but annotated labels are scarce.  
