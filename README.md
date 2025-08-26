@@ -53,17 +53,17 @@ These tables categorize each model by its learning paradigm and highlights core 
 
 ## 1. Self-Supervised DINO-based Models (Image-only)
 
-| Model           | Backbone       | Params  | WSIs      | Embedding Size | SSL Method | GitHub or Hugging Face
+| Model           | Backbone       | Params  | WSIs      | Embedding Size | SSL Method | GitHub or Hugging Face |
 |-----------------|----------------|---------|----------|----------------|------------|
-| [Virchow ViT-H](https://arxiv.org/abs/2309.07778)   | ViT-H          | 632M    | 1.5M     | 2B             | DINOv2     | [Hugging Face] (https://huggingface.co/paige-ai/Virchow)
-| [Virchow2](https://arxiv.org/abs/2408.00738)        | ViT-H          | 632M    | 3.1M     | 1.9B           | DINOv2     | [Hugging Face](https://huggingface.co/paige-ai/Virchow2)
-| Virchow2G       | ViT-G          | 1.9B    | 3.1M     | 1.9B           | DINOv2     |
-| Phikon-v2       | ViT-L          | 307M    | 58K      | 456M           | DINOv2     |
-| RudolfV         | ViT-L          | 307M    | 103K     | 750M           | DINOv2 SSL |
-| TissueConcepts  | Swin Transformer | -     | 7K       | 1.7B           | DINOv2 SSL |
-| Kaiko-ai        | ViT-L          | 303M    | 29K      | 50M            | DINOv2     |
-| UNI             | ViT-L          | 307M    | 100K     | 100M           | DINOv2     |
-| Hibou-L         | ViT-L          | 307M    | 1.1M     | 512M           | DINOv2     |
+| [Virchow ViT-H](https://arxiv.org/abs/2309.07778)   | ViT-H          | 632M    | 1.5M     | 2B             | DINOv2     | [Hugging Face] (https://huggingface.co/paige-ai/Virchow)|
+| [Virchow2](https://arxiv.org/abs/2408.00738)        | ViT-H          | 632M    | 3.1M     | 1.9B           | DINOv2     | [Hugging Face](https://huggingface.co/paige-ai/Virchow2)|
+| Virchow2G       | ViT-G          | 1.9B    | 3.1M     | 1.9B           | DINOv2     | |
+| Phikon-v2       | ViT-L          | 307M    | 58K      | 456M           | DINOv2     | |
+| RudolfV         | ViT-L          | 307M    | 103K     | 750M           | DINOv2 SSL | |
+| TissueConcepts  | Swin Transformer | -     | 7K       | 1.7B           | DINOv2 SSL | |
+| Kaiko-ai        | ViT-L          | 303M    | 29K      | 50M            | DINOv2     | |
+| UNI             | ViT-L          | 307M    | 100K     | 100M           | DINOv2     | |
+| Hibou-L         | ViT-L          | 307M    | 1.1M     | 512M           | DINOv2     | |
 
 
 ## 2. Supervised Multi-task Learning / Weakly-Supervised Models
