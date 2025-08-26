@@ -13,13 +13,13 @@ It treats an image as a sequence of patches, predicts masked patches in a self-s
    - Split image into non-overlapping patches of size P×P  
    - Flatten each patch and project to embedding vector  
    ```math
-   x_p = Flatten(X_patch) W_e + b_e
+   x_p = Flatten(X_{patch}) W_e + b_e
    
 3. Add Class Token & Positional Embedding
   - cls token aggregates global info
   - Positional embeddings encode patch location
 ``` math
-X_input = [x_cls, x_1, ..., x_N] + E_pos
+X_{input} = [x_{cls}, x_1, ..., x_N] + E_{pos}
 ```
 4. Transformer Encoder
   - Stack of N encoder layers
