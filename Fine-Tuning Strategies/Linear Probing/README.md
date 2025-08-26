@@ -3,7 +3,6 @@
 Linear probing is a **parameter-efficient evaluation method** for pre-trained representations.  
 It trains only a **linear classifier** on top of a frozen backbone to measure the quality of learned features.
 
----
 
 ## 1. Pipeline Overview
 
