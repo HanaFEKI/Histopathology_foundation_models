@@ -29,35 +29,35 @@ This implementation includes:
 
 The core of the Transformer is the **Scaled Dot-Product Attention** mechanism:
 
-\[
+```math 
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right) V
-\]
+```
 
-- \( Q \) = Queries  
-- \( K \) = Keys  
-- \( V \) = Values  
-- \( d_k \) = dimensionality of keys  
+-  ```Q``` = Queries  
+-  ```K``` = Keys  
+-  ```V``` = Values  
+-  ```d_k```  = dimensionality of keys  
 
-In **multi-head attention**, we project the inputs into \( h \) different subspaces, apply attention in each, and then concatenate:
+In **multi-head attention**, we project the inputs into  ```h``` different subspaces, apply attention in each, and then concatenate:
 
-\[
+```math 
 \text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, \dots, \text{head}_h) W^O
-\]
+```
 
 where each head is:
 
-\[
+```math
 \text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)
-\]
+```
 
 
 ### 2. Feed-Forward Network (FFN)
 
 Each encoder and decoder block has a **position-wise feed-forward network** applied independently to each token:
 
-\[
+```math
 \text{FFN}(x) = \max(0, xW_1 + b_1) W_2 + b_2
-\]
+```
 
 Often with **GELU activation** instead of ReLU for smoother gradients.
 
@@ -73,33 +73,33 @@ Each encoder layer consists of:
 
 Mathematically:
 
-\[
+```math
 z' = \text{LayerNorm}(x + \text{MultiHeadSelfAttn}(x))
-\]
+```
 
-\[
+```math
 z = \text{LayerNorm}(z' + \text{FFN}(z'))
-\]
+```
 
 
 ### 4. Decoder Layer
 
 The decoder has an additional **masked self-attention** step that prevents attending to future positions (autoregressive):
 
-1. **Masked self-attention** over target sequence \( y \)  
-   \[
+1. **Masked self-attention** over target sequence ```y``` 
+  ```math
    z'_t = \text{LayerNorm}(y + \text{MaskedMultiHeadAttn}(y))
-   \]
+   ```
 
 2. **Cross-attention** with encoder outputs  
-   \[
+   ```math
    z''_t = \text{LayerNorm}(z'_t + \text{MultiHeadAttn}(z'_t, \text{EncoderOutput}, \text{EncoderOutput}))
-   \]
+   ```
 
 3. **Feed-forward network**  
-   \[
+   ```math
    z_t = \text{LayerNorm}(z''_t + \text{FFN}(z''_t))
-   \]
+  ``
 
 
 ### 5. Positional Embeddings
