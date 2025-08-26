@@ -39,7 +39,6 @@ y = x W_{adapted}^T = x (W + alpha * A @ B)^T
 ```
 - A ∈ R^(out_features × r), B ∈ R^(r × in_features) with r ≪ min(out_features, in_features)
 
----
 
 ## 3. Key Advantages
 
@@ -47,8 +46,6 @@ y = x W_{adapted}^T = x (W + alpha * A @ B)^T
 - **Memory efficiency**: Reduces GPU memory usage  
 - **Compatibility**: Works with pre-trained models without modifying their weights  
 - **Fast fine-tuning**: Suitable for large language models or vision transformers
-
----
 
 ## 4. Use Cases
 
