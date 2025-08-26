@@ -44,7 +44,6 @@ logits = Linear(features)
 - **Fast training**: Much fewer parameters than full fine-tuning  
 - **Benchmarking representations**: Measures the quality of embeddings learned in pretraining
 
----
 
 ## 4. Use Cases
 
