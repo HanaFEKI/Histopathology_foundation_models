@@ -124,7 +124,7 @@ Final step:
 \hat{y} = \text{softmax}(W_o z_t)
 ```
 
-where ``` W_o``` projects decoder outputs to vocabulary space.
+where ```W_o``` projects decoder outputs to vocabulary space.
 
 ### 🔹 Key Intuitions
 
