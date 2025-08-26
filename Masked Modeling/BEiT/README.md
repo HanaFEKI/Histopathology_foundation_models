@@ -8,7 +8,10 @@ It treats an image as a sequence of patches, predicts masked patches in a self-s
 ## 1. Pipeline Overview
 
 1. **Input Image**  
-   - An image \(X \in \mathbb{R}^{H \times W \times C}\)
+   - An image
+ ``` math
+X \in \mathbb{R}^{H \times W \times C}
+```
 2. **Patch Embedding**  
    - Split image into non-overlapping patches of size P×P  
    - Flatten each patch and project to embedding vector  
