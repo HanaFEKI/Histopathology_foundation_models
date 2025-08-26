@@ -55,8 +55,7 @@ These tables categorize each model by its learning paradigm and highlights core 
 
 | Model           | Backbone       | Params  | WSIs      | Tiles| Link | Key Innovation | Common Use Case |
 |-----------------|----------------|---------|----------|----------------|-------------|----------------|----------------|
-| [Virchow ViT-H](https://arxiv.org/abs/2309.07778) | ViT-H | 632M | 1.5M | 2B | [Hugging Face](https://huggingface.co/paige-ai/Virchow) | Student-teacher paradigm with global and local cropping; extended-context translation (ECT) augmentation preserves cellular
-morphology | WSI-level representation, multi-task downstream tasks |
+| [Virchow ViT-H](https://arxiv.org/abs/2309.07778) | ViT-H | 632M | 1.5M | 2B | [Hugging Face](https://huggingface.co/paige-ai/Virchow) | Student-teacher paradigm with global and local cropping; extended-context translation (ECT) augmentation preserves cellular morphology | WSI-level representation, multi-task downstream tasks |
 | [Virchow2](https://arxiv.org/abs/2408.00738) | ViT-H | 632M | 3.1M | 1.9B |  [Hugging Face](https://huggingface.co/paige-ai/Virchow2) | Scaled dataset size and increased diversity, trained on 3.1M WSIs, uses domain-inspired augmentation | Tile-level representation for large pathology datasets |
 | [Virchow2G](https://arxiv.org/html/2408.00738v1) | ViT-G | 1.9B | 3.1M | 1.9B |  [Hugging Face](https://huggingface.co/paige-ai/Virchow2) | Scaled both data and model size, mixed magnification training; enhanced generalization across datasets | Multi-task WSI analysis, high generality and multipurpose use |
 | [Phikon-v2](https://arxiv.org/abs/2409.09173) | ViT-L | 307M | 58K | 456M | [Hugging Face](https://huggingface.co/owkin/phikon-v2) | Scaled ViT-L architecture; trained on 460M pathology tiles; robust ensembling for biomarker prediction | Genomic biomarker prediction, WSI-level classification |
