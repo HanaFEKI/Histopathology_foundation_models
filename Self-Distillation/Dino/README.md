@@ -17,6 +17,8 @@ It trains a **student network** to match a **teacher network**’s outputs, with
    - MLP projects features to a normalized embedding space:
    ```math
    z = MLP(f(x))
+   ```
+   ``` math
    z = normalize(z)
 
 4. **Teacher-Student Training**
