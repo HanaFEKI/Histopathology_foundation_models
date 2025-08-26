@@ -116,7 +116,7 @@ Alternatively, learnable positional embeddings are added to token embeddings.
 ### 6. Full Transformer
 
 - The **encoder** stacks ``` N ``` layers, producing contextualized token embeddings  
-- The **decoder** also stacks ``` N``` layers, attending both to past tokens (causal mask) and encoder outputs  
+- The **decoder** also stacks ```N``` layers, attending both to past tokens (causal mask) and encoder outputs  
 
 Final step:
 
