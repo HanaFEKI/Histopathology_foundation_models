@@ -29,16 +29,31 @@ This allows CLIP to generalize across tasks without task-specific retraining.
 4. **Training Objective**  
    - Contrastive loss: bring matching pairs closer, push non-matching pairs apart.  
 
-![Clip_explained](CLIP_explained.png)
+ <img src="CLIP_explained.png" alt="CLIP explained" width="400"/>
+
+## 🔹 Common Encoders Used in Histopathology CLIP Models
+
+When applying CLIP to digital pathology, researchers often replace or adapt the encoders to better capture domain-specific information.
+
+### 🖼️ Image Encoders
+- **ResNet (RN50, RN101)** → baseline encoders; sometimes fine-tuned on pathology patches.  
+- **Vision Transformer (ViT-B/16, ViT-L/14)** → widely used in CLIP; captures global context in tissue slides.  
+- **Pathology-Specific Backbones**:  
+  - **HistoResNet / HistoViT** → pretrained on large histopathology datasets.  
+  - **ConvNeXt** → modern CNN alternative with strong performance in medical imaging.  
+  - **Swin Transformer** → hierarchical transformer, effective for large WSIs (whole-slide images).  
+
+### 📝 Text Encoders
+- **CLIP Transformer Text Encoder** → default BPE-based encoder, works with pathology prompts.  
+- **BioClinicalBERT / PubMedBERT** → pretrained on biomedical texts, often used for better alignment with pathology reports.  
+- **BioMegatron / BlueBERT** → large biomedical LMs that can serve as drop-in replacements for domain-specific language understanding.
 
 ---
-
-## 🔹 Why CLIP is a Foundation Model
+## 🔹 CLIP is a Foundation Model
 - **Scalable**: Trained on massive datasets, captures broad visual-linguistic knowledge.  
 - **Zero-Shot Learning**: Can classify new categories using text prompts, without retraining.  
 - **Multimodality**: Bridges vision and language, enabling flexible downstream tasks.  
 
----
 
 ## 🔹 Importance for Histopathology
 Histopathology produces massive, complex image data, but annotated labels are scarce.  
@@ -48,16 +63,4 @@ CLIP addresses this by leveraging **text descriptions + image pairs**.
 - ✅ **Zero-/few-shot classification**: classify rare cancer subtypes with text prompts.  
 - ✅ **Explainability**: align visual features with medical terminology.  
 - ✅ **Transfer learning**: use CLIP embeddings for clustering, survival analysis, or multimodal integration.  
-
----
-
-## 🔹 Example Pipeline
-```mermaid
-flowchart TD
-    A[Histopathology Image] -->|Preprocess| B[CLIP Image Encoder]
-    C[Text Prompt/Report] -->|Preprocess| D[CLIP Text Encoder]
-    B --> E[Shared Embedding Space]
-    D --> E
-    E --> F[Similarity Computation]
-    F --> G[Output: Classification / Retrieval / Embeddings]
 
