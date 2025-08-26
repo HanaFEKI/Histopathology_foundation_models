@@ -44,7 +44,7 @@ When applying CLIP to digital pathology, researchers often replace or adapt the 
   - **Swin Transformer** → hierarchical transformer, effective for large WSIs (whole-slide images).  
 
 ### 📝 Text Encoders
-- **CLIP Transformer Text Encoder** → default BPE-based encoder, works with pathology prompts.  
+- **CLIP Transformer Text Encoder** → default BPE-based encoder (BPE-based refers to Byte Pair Encoding, which is a popular subword tokenization method used in many language models), works with pathology prompts.  
 - **BioClinicalBERT / PubMedBERT** → pretrained on biomedical texts, often used for better alignment with pathology reports.  
 - **BioMegatron / BlueBERT** → large biomedical LMs that can serve as drop-in replacements for domain-specific language understanding.
 
