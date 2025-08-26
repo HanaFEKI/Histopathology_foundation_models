@@ -3,7 +3,6 @@
 DINO is a **self-supervised learning framework** for vision models.  
 It trains a **student network** to match a **teacher network**’s outputs, without labels.
 
----
 
 ## 1. Pipeline Overview
 
