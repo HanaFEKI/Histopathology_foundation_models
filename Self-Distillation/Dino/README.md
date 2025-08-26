@@ -23,7 +23,7 @@ It trains a **student network** to match a **teacher network**’s outputs, with
 
 4. **Teacher-Student Training**
   - Student output: `z_student`
-  - Teacher output: `z_teacher` (EMA of student)
+  - Teacher output: `z_teacher` (EMA (Exponential Moving Average) of student)
   - Loss: Cross-entropy between softmax distributions of teacher and student
 
 5. **EMA Update**
