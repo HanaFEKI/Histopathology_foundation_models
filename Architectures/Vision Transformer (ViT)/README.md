@@ -34,5 +34,55 @@ X_{input} = [x_cls, x_1, x_2, ..., x_N] + E_{pos}
 - x_cls is a learnable class token used for image-level classification  
 - E_pos ∈ R^(N+1) × D encodes patch positions
 
+## 3. Transformer Encoder (Same as Before)
+
+The sequence of patches is fed into a stack of Transformer encoder layers, exactly like the encoder we already explained:
+
+``` math
+z_0 = X_input
+```
+
+- Multi-head self-attention captures relationships between patches  
+- Feed-forward networks add non-linear transformations  
+- LayerNorm and residual connections are identical to the original Transformer  
+
+The final class embedding `z_cls` is used for downstream classification:
+```math
+y_pred = MLPHead(z_cls)
+```
+
+## 4. Key Differences from Text Transformer
+
+| Aspect             | Text Transformer       | Vision Transformer (ViT)         |
+|-------------------|----------------------|---------------------------------|
+| Input              | Token embeddings      | Flattened image patches          |
+| Sequence length    | Number of tokens      | Number of patches + 1 (class token) |
+| Positional embeddings | Learnable or sinusoidal | Learnable per patch            |
+| Decoder            | Optional for seq2seq  | Typically only encoder (classification) |
+| Output             | Token predictions     | Class label or patch embeddings |
+
+
+## 5. Mathematical Intuition
+
+- **Patch attention** is equivalent to token attention in NLP:
+``` math
+Attention(Q, K, V) = softmax(Q K^T / sqrt(D)) V
+```
+
+- **Class token** aggregates global information from all patches:
+``` math
+z_cls = Attention(x_cls, [x_1, ..., x_N], [x_1, ..., x_N])
+```
+
+- The final prediction is a simple linear projection of the class token:
+``` math
+y_pred = W_o z_cls + b_o
+```
+
+
+
+
+
+
 
 
