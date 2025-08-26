@@ -81,10 +81,10 @@ These tables categorize each model by its learning paradigm and highlights core 
 
 | Model    | Backbone     | Params | WSIs  | Tiles | Learning Method | Link | Key Innovation | Common Use Case |
 |----------|-------------|--------|-------|-----------------------|----------------|----------------|----------------|----------------------|
-| [BEPH](https://arxiv.org/abs/XXXX.XXXX) | BEiTv2      | 86M   | 11K  | 11M | BEiTv2 SSL | [GitHub Repo](https://github.com/Zhcyoung/BEPH) | Lightweight self-supervised BEiT-based model pretrained using Masked Image Modeling. | Tile-level representation, WSI-level downstream tasks |
+| [BEPH](https://www.nature.com/articles/s41467-025-57587-y) | BEiTv2      | 86M   | 11K  | 11M | BEiTv2 SSL | [GitHub Repo](https://github.com/Zhcyoung/BEPH) | Lightweight self-supervised BEiT-based model pretrained using Masked Image Modeling. | Tile-level representation, WSI-level downstream tasks |
 | [iBOT](https://www.owkin.com/publications/scaling-self-supervised-learning-for-histopathology-with-masked-image-modeling) | -           | 43M   | -    | -   | Masked Image Modeling | [GitHub Repo](https://github.com/owkin/HistoSSLscaling) |Self-supervised masked patch modeling | Feature learning for image reconstruction and pretraining | 
 | [MoCoV3](https://arxiv.org/abs/2104.02057) | -           | 15M   | -    | -   | SRCL | [Github Repo](https://github.com/facebookresearch/moco-v3) |Momentum contrastive learning adaptation for histopathology | Learning robust slide embeddings with contrastive loss |
-| [PLUTO](https://arxiv.org/abs/XXXX.XXXX) | FlexiVit-S  | 22M   | 158K | 195M | DINOv2 + MAE + Fourier-loss | Combines DINOv2 SSL with masked image modeling and Fourier-based loss | Multi-scale WSI, cellular and sub-cellular representation | - |
+| [PLUTO](https://arxiv.org/abs/2405.07905) | FlexiVit-S  | 22M   | 158K | 195M | DINOv2 + MAE + Fourier-loss |  - | FlexiVit-multi-scale patching; Masked Autoencoder and Fourier-loss for out-of-distribution performance. | Multi-scale WSI, cellular and sub-cellular representation |
 
 
 
