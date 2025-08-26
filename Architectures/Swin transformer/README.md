@@ -12,7 +12,7 @@ Unlike standard Vision Transformers (ViT), it introduces **shifted windows** to 
 
 2. **Window-based Self-Attention**
    - Self-attention is computed **within local windows**
-   - Reduces complexity from O(N^2) to O(M^2), where M is window size
+   - Reduces complexity from `O(N^2)` to `O(M^2)`, where `M` is window size
 
 3. **Shifted Windows**
    - Alternating layers **shift the window partitioning**
@@ -23,7 +23,8 @@ Unlike standard Vision Transformers (ViT), it introduces **shifted windows** to 
 ## 2. Pipeline Overview
 
 1. **Input Image**
-   - e.g., X ∈ ℝ^(H × W × C)
+   ``` math
+   X ∈ ℝ^(H × W × C)
 
 2. **Patch Partition**
    - Image is split into non-overlapping patches (like ViT)
@@ -48,7 +49,6 @@ x_p = Flatten(X_{patch}) W_e + b_e
    - Global average pooling of final features
    - Linear layer for classification or task-specific head
 
----
 
 ## 3. Mathematical Intuition
 
@@ -62,7 +62,7 @@ Attention(Q, K, V) = softmax(Q K^T / sqrt(D)) V
 
 - **Patch merging**:
   - Concatenate neighboring patches along channel dimension
-  - Reduce spatial dimensions: H × W → H/2 × W/2
+  - Reduce spatial dimensions: `H × W → H/2 × W/2`
 
 ---
 
@@ -73,7 +73,6 @@ Attention(Q, K, V) = softmax(Q K^T / sqrt(D)) V
 - **Flexible window-based attention** balances local and global modeling  
 - Works well for **classification, detection, and segmentation**  
 
----
 
 ## 5. Use Cases
 
