@@ -7,7 +7,11 @@ The **Vision Transformer (ViT)** builds on the same principles of attention but 
 
 ## 1. Image as a Sequence of Patches
 
-An input image \(X \in \mathbb{R}^{H \times W \times C}\) is split into \(N\) non-overlapping patches of size \(P \times P\):
+An input image 
+```math 
+X \in \mathbb{R}^{H \times W \times C}
+```
+is split into ```N``` non-overlapping patches of size ```P``` x ```P```:
 
 ```math
 N = \frac{H \cdot W}{P^2}
@@ -19,8 +23,6 @@ X_seq = [x_1, x_2, ..., x_N]
 
 - W_e ∈ R^(P^2 * C) × D is the patch embedding matrix  
 - D is the embedding dimension
-
----
 
 ## 2. Adding a Class Token & Positional Embeddings
 
