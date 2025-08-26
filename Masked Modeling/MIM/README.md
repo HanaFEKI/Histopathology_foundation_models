@@ -40,17 +40,13 @@ Histopathology images (WSIs, biopsy patches) present unique challenges:
 
 **MIM addresses these issues:**
 
-1. **Label-free pretraining**  
-   - Learn meaningful representations from **unlabeled tissue images**, which are abundant.  
+1. **Label-free pretraining** : Learn meaningful representations from **unlabeled tissue images**, which are abundant.  
 
-2. **Improved feature extraction**  
-   - Captures **cellular patterns, gland structures, and tumor morphology** that are crucial for diagnosis.  
+2. **Improved feature extraction** : Captures **cellular patterns, gland structures, and tumor morphology** that are crucial for diagnosis.  
 
-3. **Data efficiency**  
-   - Fine-tuning on small labeled datasets is possible because the encoder already learned rich representations.  
+3. **Data efficiency** : Fine-tuning on small labeled datasets is possible because the encoder already learned rich representations.  
 
-4. **Transferability**  
-   - Pretrained MIM encoders can generalize across **different organs, stains, and cancer types**.
+4. **Transferability** : Pretrained MIM encoders can generalize across **different organs, stains, and cancer types**.
 
 
 ## 🔹 Common Approaches
@@ -59,11 +55,9 @@ Histopathology images (WSIs, biopsy patches) present unique challenges:
    - Mask a high percentage of patches (e.g., 75%).  
    - Use a lightweight decoder to reconstruct the missing patches.  
 
-2. **SimMIM**  
-   - Similar to MAE but reconstructs pixels using the **same encoder output** without a separate decoder.  
+2. **SimMIM** : Similar to MAE but reconstructs pixels using the **same encoder output** without a separate decoder.  
 
-3. **BEiT (Bidirectional Encoder representation for Image Transformers)**  
-   - Converts image patches into discrete visual tokens and predicts masked tokens (like BERT).
+3. **BEiT (Bidirectional Encoder representation for Image Transformers)** : Converts image patches into discrete visual tokens and predicts masked tokens (like BERT).
 
 ---
 
