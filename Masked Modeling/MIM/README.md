@@ -1,4 +1,4 @@
-# 🧬 Masked Image Modeling (MIM) in Histopathology
+# 🧬 Masked Image Modeling (MIM)
 
 ## 🔹 Overview
 
@@ -54,7 +54,6 @@ Histopathology images (WSIs, biopsy patches) present unique challenges:
 4. **Transferability**  
    - Pretrained MIM encoders can generalize across **different organs, stains, and cancer types**.
 
----
 
 ## 🔹 Common Approaches
 
