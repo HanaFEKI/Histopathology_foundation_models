@@ -23,7 +23,7 @@ This implementation includes:
 
 ---
 
-## 🔹 Architecture Details (with Math)
+## 🔹 Architecture Details
 
 ### 1. Multi-Head Attention
 
