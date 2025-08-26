@@ -4,7 +4,7 @@ DINOv2 is an evolution of the original DINO framework for **self-supervised lear
 It improves representation quality by addressing stability and scalability issues and supports **larger backbones and datasets**.
 
 
-## 1. Key Improvements over DINO
+## Key Improvements over DINO
 
 | Feature                 | DINO                     | DINOv2                                      |
 |-------------------------|--------------------------|---------------------------------------------|
@@ -15,23 +15,8 @@ It improves representation quality by addressing stability and scalability issue
 | Pretraining Datasets     | Moderate-scale ImageNet  | Large, diverse datasets for better generalization |
 
 
-## 2. Pipeline Overview
-
-1. **Input Images**
-   - Multiple augmented views (`x_student`, `x_teacher`)
-2. **Backbone Network**
-   - Larger, possibly hierarchical ViT or hybrid CNN-ViT
-3. **Projection Head**
-   - Residual MLP with normalization
-   ```math
-   z = normalize(MLP(f(x)))
-
-4. **Teacher-Student Framework**
-     - Student learns from teacher outputs
-     - Teacher updated via EMA
-    ```math
-    theta_{teacher} = m * theta_{teacher} + (1-m) * theta_{student}
-    ```
-5. **Loss**
-   - Cross-entropy between teacher and student softmax probabilities
-   - Temperature and centering for stability
+## Key Advantages
+- Higher-quality representations than DINO
+- Stable training with larger backbones
+- Works well for few-shot and transfer learning tasks
+- Supports dense tasks like segmentation and detection
