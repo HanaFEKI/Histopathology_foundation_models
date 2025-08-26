@@ -7,10 +7,9 @@ Instead of updating all model weights, LoRA injects **trainable low-rank matrice
 
 ## 1. Pipeline Overview
 
-1. **Start with Pre-trained Model**
-   - e.g., Transformer, ViT, BERT, or GPT model
+1. **Start with Pre-trained Model** e.g., Transformer, ViT, BERT, or GPT model
 2. **Inject LoRA Layers**
-   - For a linear layer W, introduce low-rank matrices A and B
+For a linear layer W, introduce low-rank matrices A and B
    ```math
    W_{adapted} = W + alpha * (A @ B)
 
