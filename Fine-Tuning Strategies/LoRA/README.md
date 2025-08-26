@@ -33,6 +33,8 @@ y = x W^T
 - **With LoRA adaptation:**
 ```math
 W_{adapted} = W + alpha * (A @ B)
+
+
 y = x W_{adapted}^T = x (W + alpha * A @ B)^T
 ```
 - A ∈ R^(out_features × r), B ∈ R^(r × in_features) with r ≪ min(out_features, in_features)
