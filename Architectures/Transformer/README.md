@@ -53,35 +53,23 @@ This implementation includes:
 - Can handle **variable-length sequences**  
 
 ---
+## 🔹 Applications
 
-## 🔹 Input/Output
+1. **Sequence-to-Sequence NLP tasks**
+   - Machine translation  
+   - Text summarization  
+   - Question answering  
 
-- **Encoder input:** `src` sequence `[batch_size, src_seq_len]`  
-- **Decoder input:** `tgt` sequence `[batch_size, tgt_seq_len]`  
-- **Output:** `[batch_size, tgt_seq_len, tgt_vocab]`  
+2. **Masked Image Modeling (MIM)**
+   - Encoder processes visible image patches  
+   - Decoder reconstructs masked patches  
 
-Supports optional masks:
+3. **Histopathology & Medical Imaging**
+   - Learn tissue representations from unlabeled slides  
+   - Reconstruct missing or corrupted regions  
 
-- **src_mask:** ignore padding in source sequence  
-- **tgt_mask:** prevent attending to future tokens (autoregressive)  
-- **memory_mask:** mask encoder outputs during cross-attention  
+4. **Time Series / Multi-modal Data**
+   - Model complex dependencies in sequences  
+   - Cross-attention between modalities  
 
----
 
-## 🔹 Example Usage
-
-```python
-import torch
-from transformer_full import Transformer
-
-# Example sequences
-src_vocab, tgt_vocab = 1000, 1000
-src = torch.randint(0, src_vocab, (2, 10))  # batch_size=2, seq_len=10
-tgt = torch.randint(0, tgt_vocab, (2, 12))  # batch_size=2, seq_len=12
-
-# Initialize Transformer
-model = Transformer(src_vocab, tgt_vocab, embed_dim=128, num_heads=8, num_encoder_layers=3, num_decoder_layers=3, ff_dim=512)
-
-# Forward pass
-out = model(src, tgt)
-print(out.shape)  # [2, 12, tgt_vocab]
