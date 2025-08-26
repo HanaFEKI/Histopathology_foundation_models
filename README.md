@@ -19,7 +19,7 @@ Once trained, the frozen encoder can be adapted to a variety of downstream tasks
 
 In this table, techniques are grouped by research category and ordered by their importance in recent research.
 
-| Category                  | Technique                | Paper / Link                                                        | Description                                                                                           | Explanation & Implementation                   |
+| Category                  | Technique                | Paper                                                         | Description                                                                                           | Explanation & Implementation                   |
 |---------------------------|--------------------------|---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | **[Architectures](Architectures/)**         | Transformer              | [Attention Is All You Need](https://arxiv.org/abs/1706.03762)       | Transformer architecture                                                                               | ✅[Explanation & implementation](./Architectures/Transformer/transformer.py)      |
 |                           | ViT                      | [An Image is Worth 16x16 Words](https://arxiv.org/abs/2010.11929)   | Vision Transformer architecture for image classification                                              |✅[Explanation & implementation](./Architectures/Vision%20Transformer%20(ViT)/vit.py)                      |
