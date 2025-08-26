@@ -14,7 +14,6 @@ It improves representation quality by addressing stability and scalability issue
 | Multi-crop strategy      | Fixed views              | More diverse cropping and augmentation strategies |
 | Pretraining Datasets     | Moderate-scale ImageNet  | Large, diverse datasets for better generalization |
 
----
 
 ## 2. Pipeline Overview
 
