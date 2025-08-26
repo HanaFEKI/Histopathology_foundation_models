@@ -3,7 +3,6 @@
 DINOv2 is an evolution of the original DINO framework for **self-supervised learning** of vision models.  
 It improves representation quality by addressing stability and scalability issues and supports **larger backbones and datasets**.
 
----
 
 ## 1. Key Improvements over DINO
 
