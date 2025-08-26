@@ -92,7 +92,7 @@ These tables categorize each model by its learning paradigm and highlights core 
 
 | Model | Backbone | Params | WSIs | Tiles | Learning Method | Link | Key Innovation | Common Use Case |
 |-------|----------|--------|------|-----------------------|----------------|----------------|----------------|----------------|
-| [BROW](https://arxiv.org/abs/XXXX.XXXX) | ViT-B | 86M | 11K | 180M | - | - |Efficient small-scale SSL for tissue tiles | General WSI embedding, patch-level tasks |
+| [BROW](https://arxiv.org/pdf/2309.08259) | ViT-B | 86M | 11K | 180M | - | - |Efficient small-scale SSL for tissue tiles | General WSI embedding, patch-level tasks |
 | [Phikon](https://huggingface.co/blog/EazyAl/phikon) | ViT-B | 86M | 10M | 104M | DINO SSL | [Hugging Face](https://huggingface.co/blog/EazyAl/phikon) | DINO SSL pretraining on large pathology dataset | Biomarker and genomic feature prediction |
 | [HIPT](https://arxiv.org/abs/2206.02647) | ViT-HIPT | 10M | 11K | 104M | DINO SSL | [GitHub Repo](https://github.com/mahmoodlab/HIPT) | Hierarchical patch transformer for WSI-level understanding | WSI classification, multi-task pathology tasks |
 | [Madeleine](https://github.com/mahmoodlab/MADELEINE) | - | - | - | - | - | [GitHub Repo](https://github.com/mahmoodlab/MADELEINE) |Multi-WSI modeling including IHC and H&E | Multi-slide and stain-level feature extraction |
