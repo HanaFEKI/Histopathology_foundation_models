@@ -67,13 +67,14 @@ These tables categorize each model by its learning paradigm and highlights core 
 
 
 
-### 2. Supervised Multi-task Learning / Weakly-Supervised Models
+### 2. Supervised and Weakly-Supervised Models
 
-| Model           | Backbone       | Params  | WSIs      | Embedding Size | Learning Method |
-|-----------------|----------------|---------|----------|----------------|----------------|
-| OmniScreen      | Virchow2       | 632M    | 48K      | -              | Weakly-Supervised (on Virchow2 embeddings) |
-| PathoDuet       | ViT-B          | 86M     | 11K      | 13M            | Multi-headed attention-based MIL |
-| REMEDIS         | ResNet-152     | 232M    | 29K      | -              | SimCLR (contrastive learning) |
+| Model       | Backbone  | Params | WSIs  | Tiles | Learning Method | Link | Key Innovation | Common Use Case | 
+|------------|-----------|--------|-------|-------|----------------|----------------|----------------|----------------------|
+| [OmniScreen](https://arxiv.org/abs/2408.00738) | Virchow2 | 632M | 48K | - | Weakly-Supervised (on Virchow2 embeddings) | Leverages pretrained Virchow2 embeddings, scalable weak supervision | Predicting genomic biomarkers from WSIs, multi-cancer analysis | [Hugging Face](https://huggingface.co/owkin/omniscreen) |
+| [PathoDuet](https://arxiv.org/abs/XXXX.XXXX) | ViT-B | 86M | 11K | 13M | Multi-headed attention-based MIL | Uses multi-instance learning with attention to aggregate tile-level information | Slide-level classification, WSI-level phenotype prediction | - |
+| [REMEDIS](https://arxiv.org/abs/XXXX.XXXX) | ResNet-152 | 232M | 29K | - | SimCLR (contrastive learning) | Self-supervised contrastive learning for slide and tile embeddings | Multi-domain histopathology tasks, cross-stain generalization | - |
+
 
 
 ### 3. Masked Image Modeling and Other SSL Methods
