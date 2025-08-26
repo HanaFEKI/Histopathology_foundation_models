@@ -24,7 +24,7 @@ Unlike standard Vision Transformers (ViT), it introduces **shifted windows** to 
 
 1. **Input Image**
    ``` math
-   X ∈ ℝ^(H × W × C)
+   X ∈ ℝ^{(H × W × C)}
 
 2. **Patch Partition**
    - Image is split into non-overlapping patches (like ViT)
