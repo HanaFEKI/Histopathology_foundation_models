@@ -3,7 +3,6 @@
 The **Swin Transformer** is a hierarchical Vision Transformer designed for computer vision tasks.  
 Unlike standard Vision Transformers (ViT), it introduces **shifted windows** to reduce computation and enable local-global feature representation.
 
----
 
 ## 1. Key Concepts
 
