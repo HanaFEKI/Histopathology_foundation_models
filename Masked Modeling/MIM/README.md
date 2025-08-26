@@ -1,7 +1,5 @@
 # 🧬 Masked Image Modeling (MIM)
 
-## 🔹 Overview
-
 **Masked Image Modeling (MIM)** is a self-supervised learning technique for images inspired by **Masked Language Modeling (MLM)** in NLP (e.g., BERT).  
 The core idea is simple:
 
