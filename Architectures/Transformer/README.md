@@ -23,34 +23,117 @@ This implementation includes:
 
 ---
 
-## 🔹 Architecture Details
+## 🔹 Architecture Details (with Math)
 
 ### 1. Multi-Head Attention
-- Splits embeddings into multiple heads  
-- Computes **scaled dot-product attention** for each head  
-- Concatenates outputs and applies a linear projection  
+
+The core of the Transformer is the **Scaled Dot-Product Attention** mechanism:
+
+\[
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right) V
+\]
+
+- \( Q \) = Queries  
+- \( K \) = Keys  
+- \( V \) = Values  
+- \( d_k \) = dimensionality of keys  
+
+In **multi-head attention**, we project the inputs into \( h \) different subspaces, apply attention in each, and then concatenate:
+
+\[
+\text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, \dots, \text{head}_h) W^O
+\]
+
+where each head is:
+
+\[
+\text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)
+\]
+
 
 ### 2. Feed-Forward Network (FFN)
-- Two linear layers with **GELU activation**  
-- Provides non-linear transformation of features  
+
+Each encoder and decoder block has a **position-wise feed-forward network** applied independently to each token:
+
+\[
+\text{FFN}(x) = \max(0, xW_1 + b_1) W_2 + b_2
+\]
+
+Often with **GELU activation** instead of ReLU for smoother gradients.
+
 
 ### 3. Encoder Layer
-- **Self-attention → Add & Norm → FFN → Add & Norm**  
-- Captures relationships between tokens in the **input sequence**
+
+Each encoder layer consists of:
+
+1. **Multi-head self-attention** (tokens attend to each other in the input)  
+2. **Add & Norm** (residual connection + layer normalization)  
+3. **Feed-forward network**  
+4. **Add & Norm**  
+
+Mathematically:
+
+\[
+z' = \text{LayerNorm}(x + \text{MultiHeadSelfAttn}(x))
+\]
+
+\[
+z = \text{LayerNorm}(z' + \text{FFN}(z'))
+\]
+
 
 ### 4. Decoder Layer
-- **Masked self-attention** for target sequence  
-- **Cross-attention** with encoder outputs  
-- FFN + residual connections  
+
+The decoder has an additional **masked self-attention** step that prevents attending to future positions (autoregressive):
+
+1. **Masked self-attention** over target sequence \( y \)  
+   \[
+   z'_t = \text{LayerNorm}(y + \text{MaskedMultiHeadAttn}(y))
+   \]
+
+2. **Cross-attention** with encoder outputs  
+   \[
+   z''_t = \text{LayerNorm}(z'_t + \text{MultiHeadAttn}(z'_t, \text{EncoderOutput}, \text{EncoderOutput}))
+   \]
+
+3. **Feed-forward network**  
+   \[
+   z_t = \text{LayerNorm}(z''_t + \text{FFN}(z''_t))
+   \]
+
 
 ### 5. Positional Embeddings
-- Learnable positional encodings added to token embeddings  
-- Enables the model to capture **sequence order**  
+
+Since the Transformer has **no recurrence or convolution**, positional embeddings provide sequence order information. A common method:
+
+\[
+PE_{(pos, 2i)} = \sin\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)
+\]
+\[
+PE_{(pos, 2i+1)} = \cos\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)
+\]
+
+Alternatively, learnable positional embeddings are added to token embeddings.
 
 ### 6. Full Transformer
-- Stacks multiple encoder and decoder layers  
-- Returns logits over target vocabulary for each position  
-- Can handle **variable-length sequences**  
+
+- The **encoder** stacks \( N \) layers, producing contextualized token embeddings  
+- The **decoder** also stacks \( N \) layers, attending both to past tokens (causal mask) and encoder outputs  
+
+Final step:
+
+\[
+\hat{y} = \text{softmax}(W_o z_t)
+\]
+
+where \( W_o \) projects decoder outputs to vocabulary space.
+
+### 🔹 Key Intuitions
+
+- **Attention ≈ dynamic weighted averaging**: each token looks at others to decide its representation.  
+- **Multi-head**: allows capturing different types of relationships (syntax, semantics, spatial patterns).  
+- **Encoder-decoder design**: encoder learns representations, decoder generates sequences step by step.  
+- **Positional encoding**: injects order since the model has no inherent sense of sequence.  
 
 ---
 ## 🔹 Applications
