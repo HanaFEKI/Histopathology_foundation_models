@@ -90,14 +90,14 @@ These tables categorize each model by its learning paradigm and highlights core 
 
 ### 4. Other Notable Pathology Models
 
-| Model | Backbone | Params | WSIs | Tiles / Embedding Size | Learning Method | Key Innovation | Common Use Case |
-|-------|----------|--------|------|-----------------------|----------------|----------------|----------------|
-| [BROW](https://arxiv.org/abs/XXXX.XXXX) | ViT-B | 86M | 11K | 180M | - | Efficient small-scale SSL for tissue tiles | General WSI embedding, patch-level tasks |
-| [Phikon](https://arxiv.org/abs/XXXX.XXXX) | ViT-B | 86M | 10M | 104M | DINO SSL | DINO SSL pretraining on large pathology dataset | Biomarker and genomic feature prediction |
-| [HIPT](https://arxiv.org/abs/XXXX.XXXX) | ViT-HIPT | 10M | 11K | 104M | DINO SSL | Hierarchical patch transformer for WSI-level understanding | WSI classification, multi-task pathology tasks |
-| [Madeleine](https://arxiv.org/abs/XXXX.XXXX) | - | - | - | - | - | Multi-WSI modeling including IHC and H&E | Multi-slide and stain-level feature extraction |
-| [CONCH](https://arxiv.org/abs/XXXX.XXXX) | 86M | - | 23K | 48M | - | CLIP-like model aligning text and pathology images | Image-text matching, WSI captioning |
-| [COBRA](https://arxiv.org/abs/XXXX.XXXX) | Mamba-2 | 15M | 3,048 | - | Self-supervised contrastive learning | Slide-level representation using contrastive SSL | Biomarker & mutation prediction, multi-task WSI analysis |
+| Model | Backbone | Params | WSIs | Tiles | Learning Method | Link | Key Innovation | Common Use Case |
+|-------|----------|--------|------|-----------------------|----------------|----------------|----------------|----------------|
+| [BROW](https://arxiv.org/abs/XXXX.XXXX) | ViT-B | 86M | 11K | 180M | - | - |Efficient small-scale SSL for tissue tiles | General WSI embedding, patch-level tasks |
+| [Phikon](https://huggingface.co/blog/EazyAl/phikon) | ViT-B | 86M | 10M | 104M | DINO SSL | [Hugging Face](https://huggingface.co/blog/EazyAl/phikon) | DINO SSL pretraining on large pathology dataset | Biomarker and genomic feature prediction |
+| [HIPT](https://arxiv.org/abs/2206.02647) | ViT-HIPT | 10M | 11K | 104M | DINO SSL | [GitHub Repo](https://github.com/mahmoodlab/HIPT) | Hierarchical patch transformer for WSI-level understanding | WSI classification, multi-task pathology tasks |
+| [Madeleine](https://github.com/mahmoodlab/MADELEINE) | - | - | - | - | - | [GitHub Repo](https://github.com/mahmoodlab/MADELEINE) |Multi-WSI modeling including IHC and H&E | Multi-slide and stain-level feature extraction |
+| [CONCH](https://arxiv.org/abs/2307.12914) | 86M | - | 23K | 48M | - | [GitHub Repo](https://github.com/mahmoodlab/CONCH) | CLIP-like model aligning text and pathology images | Image-text matching, WSI captioning |
+| [COBRA](https://arxiv.org/abs/2411.13623) | Mamba-2 | 15M | 3,048 | - | Self-supervised contrastive learning | [GitHub Repo](https://github.com/KatherLab/COBRA)  | Slide-level representation using contrastive SSL | Biomarker & mutation prediction, multi-task WSI analysis |
 
 
 More categories and models will be added progressively as we parse the landscape of generative pathology models and language-vision integrations.
