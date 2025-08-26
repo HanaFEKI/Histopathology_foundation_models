@@ -99,34 +99,32 @@ The decoder has an additional **masked self-attention** step that prevents atten
 3. **Feed-forward network**  
    ```math
    z_t = \text{LayerNorm}(z''_t + \text{FFN}(z''_t))
-  ``
+  
 
 
 ### 5. Positional Embeddings
 
 Since the Transformer has **no recurrence or convolution**, positional embeddings provide sequence order information. A common method:
 
-\[
+```math
 PE_{(pos, 2i)} = \sin\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)
-\]
-\[
 PE_{(pos, 2i+1)} = \cos\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)
-\]
+```
 
 Alternatively, learnable positional embeddings are added to token embeddings.
 
 ### 6. Full Transformer
 
-- The **encoder** stacks \( N \) layers, producing contextualized token embeddings  
-- The **decoder** also stacks \( N \) layers, attending both to past tokens (causal mask) and encoder outputs  
+- The **encoder** stacks ``` N ``` layers, producing contextualized token embeddings  
+- The **decoder** also stacks ``` N``` layers, attending both to past tokens (causal mask) and encoder outputs  
 
 Final step:
 
-\[
+```math
 \hat{y} = \text{softmax}(W_o z_t)
-\]
+```
 
-where \( W_o \) projects decoder outputs to vocabulary space.
+where ``` W_o``` projects decoder outputs to vocabulary space.
 
 ### 🔹 Key Intuitions
 
