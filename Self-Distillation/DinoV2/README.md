@@ -27,8 +27,8 @@ It improves representation quality by addressing stability and scalability issue
    z = normalize(MLP(f(x)))
 
 4. **Teacher-Student Framework**
-  - Student learns from teacher outputs
-  - Teacher updated via EMA
+     - Student learns from teacher outputs
+     - Teacher updated via EMA
     ```math
     theta_{teacher} = m * theta_{teacher} + (1-m) * theta_{student}
     ```
