@@ -46,12 +46,12 @@ In this table, techniques are grouped by research category and ordered by their 
 
   
 ---
-## 🧠 Foundation Models in Computational Pathology
+## Foundation Models in Computational Pathology
 
 A curated list of foundational and large-scale models for computational pathology. 
 These tables categorize each model by its learning paradigm and highlights core innovations and downstream capabilities.
 
-## 1. Self-Supervised DINOv2-based Models (Image-only)
+### 1. Self-Supervised DINOv2-based Models (Image-only)
 
 | Model           | Backbone       | Params  | WSIs      | Tiles| Link | Key Innovation | Common Use Case |
 |-----------------|----------------|---------|----------|----------------|-------------|----------------|----------------|
@@ -67,7 +67,7 @@ These tables categorize each model by its learning paradigm and highlights core 
 
 
 
-## 2. Supervised Multi-task Learning / Weakly-Supervised Models
+### 2. Supervised Multi-task Learning / Weakly-Supervised Models
 
 | Model           | Backbone       | Params  | WSIs      | Embedding Size | Learning Method |
 |-----------------|----------------|---------|----------|----------------|----------------|
@@ -75,9 +75,8 @@ These tables categorize each model by its learning paradigm and highlights core 
 | PathoDuet       | ViT-B          | 86M     | 11K      | 13M            | Multi-headed attention-based MIL |
 | REMEDIS         | ResNet-152     | 232M    | 29K      | -              | SimCLR (contrastive learning) |
 
----
 
-## 3. Masked Image Modeling and Other SSL Methods
+### 3. Masked Image Modeling and Other SSL Methods
 
 | Model           | Backbone       | Params  | WSIs      | Embedding Size | SSL Method |
 |-----------------|----------------|---------|----------|----------------|------------|
@@ -86,9 +85,8 @@ These tables categorize each model by its learning paradigm and highlights core 
 | MoCoV3          | -              | 15M     | -        | -              | SRCL       |
 | PLUTO           | FlexiVit-S     | 22M     | 158K     | 195M           | DINOv2 + MAE + Fourier-loss |
 
----
 
-## 4. Other Notable Models
+### 4. Other Notable Models
 
 | Model           | Backbone       | Params  | WSIs      | Embedding Size | Learning Method |
 |-----------------|----------------|---------|----------|----------------|----------------|
