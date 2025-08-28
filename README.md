@@ -41,7 +41,6 @@ In this table, techniques are grouped by research category and ordered by their 
 | **[Fine-Tuning Strategies](Fine-Tuning%20Strategies/)**|  LoRA                 | [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)                 | Efficient fine-tuning via injecting trainable low-rank matrices into frozen weights                  | ✅[Explanation & implementation](./Fine-Tuning%20Strategies/LoRA/README.md)                       |
 |                           | Linear Probing       | [Do Better ImageNet Models Transfer Better?](https://arxiv.org/abs/1912.11370)                         | Training only the classification head on top of a frozen encoder to evaluate representation quality  | ✅[Explanation & implementation](./Fine-Tuning%20Strategies/Linear%20Probing/)   |
 | **[Other Techniques](Other%20Techniques/)**   | Aggregation              | [An Aggregation of Aggregation Methods in Computational Pathology](https://arxiv.org/abs/2211.01256)  | Techniques to aggregate patch or token embeddings to form global representations                     | ✅[Explanation & implementation](Other%20Techniques/Aggregation/)        |
-|                           | Mixture of Experts       | [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://arxiv.org/abs/1701.06538) | Activating only a few expert sub-networks per input for scalability and specialization               | [moe](./explanations/moe)                         |
 
 
   
