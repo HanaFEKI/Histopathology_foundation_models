@@ -100,4 +100,4 @@ These tables categorize each model by its learning paradigm and highlights core 
 
 
 More categories and models will be added progressively as we parse the landscape of generative pathology models and language-vision integrations.
-If you use or extend this repo, please cite the source papers and link back to this project. 🙏
+If you use or extend this repo, please link back to this project. 🙏
